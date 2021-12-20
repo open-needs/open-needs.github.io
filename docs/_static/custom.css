@@ -1,0 +1,17 @@
+img.index-logo {
+    margin-top: 50px;
+}
+
+/* Sphinx-Needs layout fixes for Furo theme */
+tr.need.content {
+    display: inherit !important;
+}
+
+td.need.head, td.need.content, td.need.footer {
+    padding: 5px;
+}
+
+div.table-wrapper {
+    overflow: hidden;
+}
+/* END: Sphinx-Needs layout fixes for Furo theme */
