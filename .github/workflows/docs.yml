@@ -32,6 +32,12 @@ jobs:
           python-version: 3.8
       # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
       # ^-- How to set up caching for pip on Ubuntu
+      - name: Update apt package index
+        run: sudo apt-get update
+      - name: Install Plantuml
+        run: sudo apt-get install -y graphviz plantuml
+      - name: Test Plantuml
+        run: plantuml -testdot
       - name: Cache pip
         uses: actions/cache@v2
         with:
