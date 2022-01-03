@@ -21,7 +21,6 @@ project = 'Open-Needs'
 copyright = '2021, Open-Needs community'
 author = 'Open-Needs community'
 
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -41,7 +40,6 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -57,3 +55,24 @@ html_static_path = ['_static']
 html_css_files = [
     'custom.css'
 ]
+
+html_title = 'Open-Needs'
+
+html_theme_options = {
+    "sidebar_hide_name": True,
+    "announcement": "<em>Important:</em> This project is still in concept phase and most points are under discussion.",
+    "light_logo": 'open-needs-logo.png',
+    "dark_logo": 'open-needs-logo-white.png',
+}
+
+html_sidebars = {
+    "**": [
+        "sidebar/scroll-start.html",
+        "sidebar/brand.html",
+        "sidebar/search.html",
+        "sidebar/navigation.html",
+        "sidebar/open-needs-sidebar.html",
+        "sidebar/ethical-ads.html",
+        "sidebar/scroll-end.html",
+    ]
+}

@@ -9,6 +9,7 @@ tr.need.content {
 
 td.need.head, td.need.content, td.need.footer {
     padding: 5px;
+    color: #000000 !important;  /* Overwrite for furo dark mode */
 }
 
 div.table-wrapper {

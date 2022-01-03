@@ -1,6 +1,9 @@
 Open-Needs DB concept
 =====================
 
+:repository: https://github.com/open-needs/open-needs-db
+:user documentation: tbd
+
 Open-Needs is a generic lib to create, manage, link and automate life cycle objects in Python applications.
 
 It is designed to be used as backend in use-case specific tools like [Sphinx-Needs](https://sphinxcontrib-needs.readthedocs.io/en/latest/).
