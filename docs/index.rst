@@ -8,6 +8,7 @@
 Concept and Ideas
 =================
 
+
 .. sidebar:: Tools & Extensions
 
    * `Open-Needs IDE <https://github.com/open-needs/open-needs-ide>`_

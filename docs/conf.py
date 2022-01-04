@@ -59,11 +59,11 @@ html_css_files = [
 
 html_title = 'Open-Needs'
 
+html_logo = "_static/open-needs-logo.png"
+
 html_theme_options = {
     "sidebar_hide_name": True,
     "announcement": "<em>Important:</em> This project is still in concept phase and most points are under discussion.",
-    "light_logo": 'open-needs-logo.png',
-    "dark_logo": 'open-needs-logo-white.png',
 }
 
 html_sidebars = {
