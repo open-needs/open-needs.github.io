@@ -1,0 +1,10 @@
+@startuml
+    class Fields {
+        - id: unique int
+        + project ref to **Projects**
+        + need: ref to **Needs**
+        + name: str
+        + type: enum[str, float, link, need_link]
+        + value: str
+    }
+@enduml

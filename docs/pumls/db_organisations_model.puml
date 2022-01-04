@@ -1,0 +1,8 @@
+@startuml
+    class Organisations {
+        - id: unique int
+        + org_id: unique str
+        + name: str
+        + description: str
+    }
+@enduml

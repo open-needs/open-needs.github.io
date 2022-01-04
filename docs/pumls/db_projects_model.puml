@@ -1,0 +1,11 @@
+@startuml
+    class Projects {
+        - id: unique int
+        + **organisation**: ref to **Organisations**
+        + project_id: unique str
+        + name: str
+        + description: str
+        + configs: json dict
+        + rules: json dict
+    }
+@enduml

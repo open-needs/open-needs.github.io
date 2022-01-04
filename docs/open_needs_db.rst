@@ -1,89 +1,20 @@
 Open-Needs DB concept
 =====================
 
+:status: work in progress
 :repository: https://github.com/open-needs/open-needs-db
 :user documentation: tbd
 
-Open-Needs is a generic lib to create, manage, link and automate life cycle objects in Python applications.
+**Open-Needs DB** is a REST based Database to create, manage, link and automate life cycle objects.
 
-It is designed to be used as backend in use-case specific tools like [Sphinx-Needs](https://sphinxcontrib-needs.readthedocs.io/en/latest/).
+It is designed to be used as backend in use-case specific tools like
+`Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io/en/latest/>`__.
 
-Different Interfaces can be build on top of it to access shared or independet datasets of need objects.
-
-.. note::
-
-    Project is currently in conceptual phase. So nothing to use, yet
-
-Data objects
-------------
-
-Need object
-~~~~~~~~~~~
-A Need object is a general object, which can be a requirement, a specification, a rule, an employee or
-whatever it shall represent.
-
-But all Need objects have some common data / functions. They have:
-
-* a project reference
-* a key
-* a title
-* some content
-* some meta data, like status, tags
-* some references to other need objects, like links.
-
-
-Project object
-~~~~~~~~~~~~~~
-A Project object mostly contains rules, which assigned need objects must follow.
-
-It contains the following information:
-
-* a key
-* a name
-* a description
-* configurations for Need objects
-* rules for Need objects
-
-
-Data JSON example
-~~~~~~~~~~~~~~~~~
-
-.. code-block:: json
-
-    "projects": {
-      "MY_PROJECT": {
-        "key": "MY_PROJECT",
-        "name": "My first project with Open-Needs",
-        "description": "Just used for some tests",
-        "config": {},
-        "rules": {},
-        "needs": {
-          "NEED_1": {
-            "project": "MY_PROJECT",
-            "key": "NEED_1",
-            "title": "Example Need",
-            "content": "Just some content as example",
-            "status": "open",
-            "tags": ["example", "awesome"],
-            "links": ["NEED_2"]
-          },
-          "NEED_2": {
-            "project": "MY_PROJECT",
-            "key": "NEED_2",
-            "title": "Another Example Need",
-            "content": "",
-            "status": "closed",
-            "tags": ["example"],
-            "links": []
-          }
-        }
-      }
-    }
+Different Interfaces can be build to access the data in different tools.
 
 Philosophy
 ----------
-- Data is document based
-- No strict schema for documents
+- No strict schema for need data
 - No rules checks
 
 This philosophy is for this project only.
@@ -91,8 +22,8 @@ Extensions and interfaces may introduce functions to e.g. check project rules be
 
 Event system
 ------------
-Open needs is based on an event system, which is used to execute internal functions but also functions from extensions or other sources.
-All functions have to be registered via the Open-Needs API.
+**Open-Needs DB** is based on an event system, which is used to execute internal functions but also functions from
+extensions or other sources. All functions have to be registered via the Open-Needs API.
 
 Current events are:
 
@@ -142,111 +73,210 @@ If events are missing, feel free to create a PR.
 Extensions
 ----------
 Extensions need to be registered during runtime of Open-Needs, so that their features become part of the backend.
-They are used to extend the internal data handling logic of Open-Needs by registering their functions in the Open-Needs event system.
+They are used to extend the internal data handling logic of Open-Needs by registering their functions in the
+Open-Needs event system.
 
-Use cases may be: Collect metrics, check project rules before need creation, check authentication, trigger external systems.
+Use cases may be: Collect metrics, check project rules before need creation, check authentication,
+trigger external systems.
 
 Interfaces
 ----------
 Interfaces are a way to access the data of Open-Needs.
-Open-Needs provides a Python-API only.
-On top of this additional interfaces can be build.
+Open-Needs provides a REST API only.
 
-Possible interfaces may be: A REST or GraphQL API, IDE Extension, Static site generator interfaces, JSON exporter, WebViewer, ...
+Currently planned is the improvement of `Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io/en/latest/>`__
+to support Open-Needs.
 
-Currently planned is the improvement of [Sphinx-Needs](https://sphinxcontrib-needs.readthedocs.io/en/latest/) to support Open-Needs.
+Security
+--------
+The data inside **Open-Needs DB** must be secured and access and edit rights must be controllable.
+
+Example: Not all users shall be allowed to update needs for release version (e.g. Product_1.0), but for "sub-versions"
+(e.g. 1.0_dev_feature_x).
+
+Therefore a user management including roles and permissions must be implemented.
+
+For the implementation of authentication mechanisms(e.g. OAuth2), FastAPI internal solutions shall be used.
 
 Database schema
 ---------------
 Main tables:
+
+* Organisations
 * Projects
 * Needs
-* Fields
+
+.. uml:: pumls/db_models.puml
+
+Organisations
+~~~~~~~~~~~~~
+A unity to represent a company or a project team.
+
+.. uml:: pumls/db_organisations_model.puml
 
 Projects
 ~~~~~~~~
-* id: unique id
-* key : unique key
-* title: string
-* description: string
-* configs: JSON dict
-* rules: JSON dict
-* needs: back_reference from Needs
+Specifies a specific project inside an organisations.
 
+This should be normally related to a Sphinx project or any other technical project, which contains the source code
+for needs.
 
-.. list-table::
-
-   * - id
-     - key
-     - title
-     - description
-     - configs
-     - rules
-     - needs
-   * - 1
-     - SW_X
-     - Module X Docs
-     - SW Dev of module X
-     - {configs.1;config.3}
-     - {... }
-     - [...]
+.. uml:: pumls/db_projects_model.puml
 
 Needs
 ~~~~~
-Contains the main information of needs
+Stores the final needs.
 
-* id: unique id
-* key : key
-* project: reference to Projects
-* title: string
-* content: JSON dict (value, format)
-* fields: back_references from Fields
+Each row is a need, linked to a specific project of an organisation.
 
+Only title and content get stored as columns. The rest of the data is stored in a single ``data`` column of type
+``JSON``.
 
-.. list-table::
+This allows to store needs of different data schemas (e.g. extra fields), without touch ing the structure of
+database tables.
 
-   * - id
-     - key
-     - project
-     - title
-     - content
-     - fields
-   * - 1
-     - NEED_001
-     - Projects:1
-     - Use Python
-     - {"value": "Use Python >3.7 for **module x**", "format": "markdown"
-     - FIELDS:1, FIELD:321
+The content of ``data`` is filterable by all common SQL-compliant databases.
 
-Fields
-~~~~~~
-Contains the single fields of all the needs.
-
-* id: unique key
-* project: Reference to Projects
-* need: Reference to Needs
-* field: JSON dict (field name, field value, field type)
+.. uml:: pumls/db_needs_model.puml
 
 
-.. list-table::
+REST API
+--------
+All REST API endpoint has the following, common config:
 
-   * - id
-     - project
-     - need
-     - field
-   * - 1
-     - Projects:1
-     - Needs:1
-     - {"name": "status", "value":: "open", "type": "str" }
-   * - 2
-     - Projects:2
-     - Needs:3
-     - {"name": "status", "value":: "closed", "type": "str" }
-   * - 3
-     - Projects:1
-     - Needs:2
-     - {"name": "type", "value":: "Requirement", "type": "str" }
-   * - 4
-     - Projects:1
-     - Needs:2
-     - {"name": "Price", "value":: 130.25, "type": "float" }
+.. http:get:: /any/open-needs/url
+
+   :statuscode 200: No error
+   :statuscode 401: Authentication needed
+
+   :reqheader Accept: the response content type depends on :mailheader:`Accept` header
+   :reqheader Authorization: optional OAuth token to authenticate
+
+   :resheader Content-Type: this depends on :mailheader:`Accept header of request`
+
+A complete list of all defined routes can be found here: :ref:`routingtable`.
+
+
+Organisations
+~~~~~~~~~~~~~
+.. http:get:: /
+
+   Lists all available organisations
+
+   :example: https://app.open-needs.org/api/
+
+.. http:post:: /
+
+   Creates a new organisation
+
+.. http:get:: /(str:org_id)
+
+   Returns information of specific organisation, including all projects.
+
+   :example: https://app.open-needs.org/api/rocketLabs
+
+.. http:put:: /(str:org_id)
+
+   Updates an existing organisation
+
+   :example: https://app.open-needs.org/api/rocketLabs
+
+Projects
+~~~~~~~~
+
+.. http:post:: /(str:org_id)
+
+   Creates a new project inside the given organisation.
+
+.. http:get:: /(str:org_id)/(str:project_id)
+
+   Returns information of a specific project inside an organisation.
+   Includes:
+
+   * configs
+   * rules
+   * versions
+
+   :example: https://app.open-needs.org/api/rocketLabs/neptune3000
+
+.. http:put:: /(str:org_id)/(str:project_id)
+
+   Updates a project. Allows to set configs and rules.
+
+Versions
+~~~~~~~~
+**Versions** are an attribute of a ``Need`` object only.
+
+There is no extra table for versions and they get create by simply setting the related ``version`` attribute
+of a need.
+
+Open-Needs automatically collects this information and knows, which versions are available.
+
+.. http:get:: /(str:org_id)/(str:project_id)/(str:version)
+
+   Returns all needs of a given version inside a specific project of an organisation.
+
+   :example: https://app.open-needs.org/api/rocketLabs/neptune3000/2.1.1
+
+Needs
+~~~~~
+
+.. http:post:: /(str:org_id)/(str:project_id)/(str:version)
+
+   Allows to create a new need.
+
+
+.. http:get:: /(str:org_id)/(str:project_id)/(str:version)/(str:need_id)
+
+   Returns a specific need.
+
+   :example: https://app.open-needs.org/api/rocketLabs/neptune3000/2.1.1/REQ_FUEL_TYPE
+
+
+.. http:put:: /(str:org_id)/(str:project_id)/(str:version)/(str:need_id)
+
+   Updates a specific need.
+
+Filtering
+~~~~~~~~~
+
+.. http:post:: /filter
+
+   Filters needs with a given filter string.
+
+   .. warning::
+
+      Sphinx-Needs currently support Python based filter string only, which allows to execute any Python code.
+      This is too dangerous for a web application, so that another solution must be found or at least
+      "Python based filter string feature" must be activated by user.
+
+   :example: https://app.open-needs.org/api/filter
+
+
+Technology Stack
+----------------
+**Open-Needs DB** will be based on `FastAPI <https://fastapi.tiangolo.com/>`__, which provides all needed functionality
+for the API.
+
+FastAPI
+~~~~~~~
+
+Useful FastAPI extensions may be:
+
+* `FastAPI Permissions <https://github.com/holgi/fastapi-permissions>`__
+* `FastAPI Users <https://github.com/fastapi-users/fastapi-users>`__
+
+A great list of FastAPI links can be found at https://github.com/mjhea0/awesome-fastapi.
+
+Database
+~~~~~~~~
+**Open-Needs DB** shall be based on **SQL** and support most **SQL**-based databases, like SQLite and PostgreSQL.
+
+Therefore it uses as ORM `SQLAlchemy <https://www.sqlalchemy.org/>`__, which works pretty good with FastAPI.
+
+.. hint::
+
+    Projects like `SQLModel <https://sqlmodel.tiangolo.com/>`__ which allows to reuse the same model-definition for
+    FastAPI routes and database models, shall not be used. Mostly because of the lack of customization, missing features
+    (JSON fields) and because the models/schemas of  **Open-Needs DB** may differ between FastAPI and SQLAlchemy
+    (as a lot of values may get calculated).

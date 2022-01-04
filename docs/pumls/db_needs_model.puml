@@ -1,0 +1,12 @@
+@startuml
+    class Needs {
+        - id: unique int
+        + **project** ref to **Projects**
+        + **version**: str
+       + need_id: str
+        + title: str
+        + content: str
+        + content_type: enum[rst, md]
+        + data: JSON
+    }
+@enduml
