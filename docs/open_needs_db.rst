@@ -1,7 +1,7 @@
 Open-Needs DB concept
 =====================
 
-:status: work in progress
+:status: :badge:`work in progress,badge-primary`
 :repository: https://github.com/open-needs/open-needs-db
 :user documentation: tbd
 

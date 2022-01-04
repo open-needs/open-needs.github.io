@@ -1,7 +1,3 @@
-:title: Tesat me
-
-
-
 .. image:: ../images/open-needs-logo.png
    :align: center
    :width: 50%
@@ -329,4 +325,5 @@ For details about usage and configuration, please take a look into the related p
 .. toctree::
 
     open_needs_db
+    open_needs_ide
 
