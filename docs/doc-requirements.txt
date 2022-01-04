@@ -1,6 +1,7 @@
 sphinx
 furo
 sphinxcontrib-plantuml
+sphinxcontrib-httpdomain
 sphinxcontrib-needs
 sphinx-panels
 

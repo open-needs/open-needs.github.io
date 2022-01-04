@@ -14,7 +14,8 @@ Concept and Ideas
 
 .. sidebar:: Tools & Extensions
 
-   * `Open-Needs-IDE <https://github.com/open-needs/open-needs-ide>`_
+   * `Open-Needs IDE <https://github.com/open-needs/open-needs-ide>`_
+   * `Open-Needs DB <https://github.com/open-needs/open-needs-db>`_
 
 This documentation describes the concept and current ideas of Open-Needs, which realization starts
 in 2022.
