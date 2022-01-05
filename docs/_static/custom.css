@@ -15,8 +15,24 @@ td.need.head, td.need.content, td.need.footer {
 div.table-wrapper {
     overflow: hidden;
 }
+
+div.needs_meta {
+    color: #000000;
+}
 /* END: Sphinx-Needs layout fixes for Furo theme */
 
 h1, h2, h3, h4, h5, h6 {
     border-bottom: 4px solid #ffe680;
 }
+
+table.funding {
+    background-color: #ffffff;
+    /*border-spacing: 20px !important;*/
+    /*border-collapse: separate;*/
+}
+
+table.funding td {
+    padding: 20px 10px;
+    border: none;
+}
+

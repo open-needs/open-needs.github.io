@@ -22,6 +22,7 @@ User manuals or details of implementation can be found in the documentation of t
 Education and Research.
 
 .. list-table::
+   :class: funding
 
    * - .. image:: _static/PrototypeFund-P-Logo.png
           :align: center
