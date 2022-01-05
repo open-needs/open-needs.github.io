@@ -232,7 +232,7 @@ Or an extension for VS Code. Or a web interface. Or an Excel reader. It simply s
 Maintaining a feature twice, but in different programming language, is hard, annoying and a good way to mess up
 everything.
 
-Therefore **Open-Needs** tries to provide its feature all server-side, so that the different interface like
+Therefore **Open-Needs** tries to provide its features all server-side, so that the different interface like
 Sphinx-Needs can be kept as dumb as possible.
 
 Small & fast, but scalable
@@ -327,4 +327,5 @@ For details about usage and configuration, please take a look into the related p
 
     open_needs_db
     open_needs_ide
+    open_needs_webapp
 

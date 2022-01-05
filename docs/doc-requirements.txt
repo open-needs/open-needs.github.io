@@ -4,4 +4,4 @@ sphinxcontrib-plantuml
 sphinxcontrib-httpdomain
 sphinxcontrib-needs
 sphinx-panels
-
+sphinx-disqus

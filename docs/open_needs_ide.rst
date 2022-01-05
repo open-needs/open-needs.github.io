@@ -1,6 +1,12 @@
 Open-Needs IDE concept
 ======================
 
+.. sidebar:: Logo
+
+   .. image:: /_static/open-needs-ide-logo.png
+      :align: center
+      :width: 200px
+
 :status: :badge:`work in progress,badge-primary`
 :repository: https://github.com/open-needs/open-needs-ide
 :user documentation: tbd
@@ -21,6 +27,7 @@ the `Language Server Protocol <https://microsoft.github.io/language-server-proto
     The current version of **Open Needs IDE** works with the
     `needs.json <https://sphinxcontrib-needs.readthedocs.io/en/latest/builders.html>`__ file of
     `Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io>`__ only.
+
 
 Motivation
 ----------
@@ -69,3 +76,5 @@ and logic to connect to the Language Server only.
 
     @enduml
 
+
+.. include:: discussion.rst

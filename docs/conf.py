@@ -31,7 +31,10 @@ extensions = [
     "sphinxcontrib.needs",
     "sphinx_panels",
     "sphinxcontrib.httpdomain",
+    "sphinx_disqus.disqus",
 ]
+
+disqus_shortname = "open-needs-org"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

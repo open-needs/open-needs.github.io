@@ -1,9 +1,28 @@
 Open-Needs DB concept
 =====================
 
+.. sidebar:: Logo
+
+   .. image:: /_static/open-needs-db-logo.png
+      :align: center
+      :width: 200px
+
 :status: :badge:`work in progress,badge-primary`
 :repository: https://github.com/open-needs/open-needs-db
 :user documentation: tbd
+
+.. dropdown:: To be discussed
+
+   This is a list of open questions regarding the concept of this page.
+
+   * Version support
+
+     * Not sure if Open-Needs shall deal with **version** or not. As it may be not needed for simple projects (dw)
+     * Also the name "version" is not smart, as it is often used by the projects itself to link e.g. a requirement
+       to a product version. But we are talking about "documentation version", so the version of the documentation,
+       which contains the need. I have the feeling that this is more or less an internal var, so that we maybe call
+       it "doc_version" and it shall be set automatically by each interface when talking with **Open-Need DB**. (dw)
+
 
 **Open-Needs DB** is a REST based Database to create, manage, link and automate life cycle objects.
 
@@ -78,6 +97,8 @@ Open-Needs event system.
 
 Use cases may be: Collect metrics, check project rules before need creation, check authentication,
 trigger external systems.
+
+The goal is that an **Open-Needs** extension, can provide new features for backend and/or frontend.
 
 Interfaces
 ----------
@@ -163,7 +184,7 @@ Organisations
 
    Lists all available organisations
 
-   :example: https://app.open-needs.org/api/
+   :example: https://api.open-needs.org/
 
 .. http:post:: /
 
@@ -173,13 +194,13 @@ Organisations
 
    Returns information of specific organisation, including all projects.
 
-   :example: https://app.open-needs.org/api/rocketLabs
+   :example: https://api.open-needs.org/rocketLabs
 
 .. http:put:: /(str:org_id)
 
    Updates an existing organisation
 
-   :example: https://app.open-needs.org/api/rocketLabs
+   :example: https://api.open-needs.org/rocketLabs
 
 Projects
 ~~~~~~~~
@@ -197,7 +218,7 @@ Projects
    * rules
    * versions
 
-   :example: https://app.open-needs.org/api/rocketLabs/neptune3000
+   :example: https://api.open-needs.org/rocketLabs/neptune3000
 
 .. http:put:: /(str:org_id)/(str:project_id)
 
@@ -216,7 +237,7 @@ Open-Needs automatically collects this information and knows, which versions are
 
    Returns all needs of a given version inside a specific project of an organisation.
 
-   :example: https://app.open-needs.org/api/rocketLabs/neptune3000/2.1.1
+   :example: https://api.open-needs.org/rocketLabs/neptune3000/2.1.1
 
 Needs
 ~~~~~
@@ -230,7 +251,7 @@ Needs
 
    Returns a specific need.
 
-   :example: https://app.open-needs.org/api/rocketLabs/neptune3000/2.1.1/REQ_FUEL_TYPE
+   :example: https://api.open-needs.org/rocketLabs/neptune3000/2.1.1/REQ_FUEL_TYPE
 
 
 .. http:put:: /(str:org_id)/(str:project_id)/(str:version)/(str:need_id)
@@ -250,7 +271,7 @@ Filtering
       This is too dangerous for a web application, so that another solution must be found or at least
       "Python based filter string feature" must be activated by user.
 
-   :example: https://app.open-needs.org/api/filter
+   :example: https://api.open-needs.org/filter
 
 
 Technology Stack
@@ -280,3 +301,6 @@ Therefore it uses as ORM `SQLAlchemy <https://www.sqlalchemy.org/>`__, which wor
     FastAPI routes and database models, shall not be used. Mostly because of the lack of customization, missing features
     (JSON fields) and because the models/schemas of  **Open-Needs DB** may differ between FastAPI and SQLAlchemy
     (as a lot of values may get calculated).
+
+
+.. include:: discussion.rst
