@@ -9,7 +9,7 @@ Open-Needs IDE concept
 
 :status: :badge:`work in progress,badge-primary`
 :repository: https://github.com/open-needs/open-needs-ide
-:user documentation: tbd
+:user documentation: https://open-needs.org/open-needs-ide/
 
 **Open-Needs IDE** shall provide extensions for different IDEs (VS Code, PyCharm) and is based on
 the `Language Server Protocol <https://microsoft.github.io/language-server-protocol/>`__.

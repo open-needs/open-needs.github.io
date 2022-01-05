@@ -329,3 +329,4 @@ For details about usage and configuration, please take a look into the related p
     open_needs_ide
     open_needs_webapp
 
+.. include:: discussion.rst
