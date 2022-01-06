@@ -4,8 +4,16 @@
 
 **Status**: Concepts under development
 
-Concept and Ideas
-=================
+Open-Needs is a tool collection for docs-as-code based projects.
+It allows to create and maintain objects like requirements or specifications
+in tools like Sphinx, AsciiDoctor, MkDocs and more.
+
+It's main goal is to provide the functionality of
+`Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io/en/latest/>`_ in a framework-independent way for all
+docs-as-code related tools.
+
+Open-Needs Concepts
+===================
 
 .. sidebar:: Tools & Extensions
 

@@ -5,3 +5,4 @@ sphinxcontrib-httpdomain
 sphinxcontrib-needs
 sphinx-panels
 sphinx-disqus
+sphinx-preview

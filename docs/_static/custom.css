@@ -37,3 +37,11 @@ table.funding td {
     border: none;
 }
 
+/* SPhinx-Preview setup */
+span.sp_preview_icon {
+    color: #aaaaaa;
+}
+
+span.sp_preview_icon:hover {
+    color: #555555;
+}

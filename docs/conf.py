@@ -32,9 +32,29 @@ extensions = [
     "sphinx_panels",
     "sphinxcontrib.httpdomain",
     "sphinx_disqus.disqus",
+    "sphinx_preview",
 ]
 
 disqus_shortname = "open-needs-org"
+
+preview_config = {
+    # Each link on main body (article), but not if link is used for an image and
+    # if link-target is github.com (does not allow iframe usage)
+    "selector": "article p a:not(:has(>img),[href*='github.com'])",
+
+    "not_selector": "div.needs_head a, h1 a, h2 a",
+    "set_icon": True,
+    "icon_only": True,
+    "icon_click": True,
+    "icon": "&nbsp;👁",
+    "width": 500,
+    "height": 400,
+    "offset": {
+        "left": 20,
+        "top": 20
+    },
+    "timeout": 500,
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
