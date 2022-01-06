@@ -15,54 +15,6 @@ It's main goal is to provide the functionality of
 `Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io/en/latest/>`_ in a framework-independent way for all
 docs-as-code related tools.
 
-.. uml::
-   :align: center
-
-    @startuml
-    skinparam nodesep 70
-    skinparam ranksep 50
-
-        card IDE as ide {
-            card "Open-Needs\nIDE extension" as ext #6fa
-            note right: verifies data,\nprovides previews,\nfollows links
-        }
-
-        artifact "**Documentation files**\n(md, rst, ...)" as docs #6af
-        card "**Documentation Framework**\n(MkDocs, AsciiDoc, Sphinx, ...)" as df #6af {
-            card "Parser" as parser
-            card "Open-Needs Client" as client #6fa
-            card "Builder" as builder
-        }
-
-        card "**Open-Needs DB**" as on #6fa {
-            database "**Database**\n(SQL based)" as db
-            cloud "**API**\n(REST based)" as rest
-        }
-
-        artifact "**Final documentation**\n(HTML, PDF, ...)" as final #6af
-
-        card "Web browser" {
-            card "Open-Needs\nWebApp" as webapp #6fa
-            note right: Quick analysis\nand comparisons
-        }
-
-        ext -l-> docs: supports \nduring writing
-        docs --> parser
-        parser --> client
-        client -> rest
-        rest <-> db
-        rest -> client
-        client --> builder
-
-        builder <--> final
-
-        ext <.[#333]d..> rest
-
-        webapp <.[#333]u..> rest
-
-
-    @enduml
-
 .. sidebar:: Tools & Extensions
 
    * `Open-Needs IDE <https://open-needs.org/open-needs-ide/>`_
@@ -87,6 +39,125 @@ Education and Research.
           :align: center
           :width: 150px
           :target: https://www.bmbf.de/bmbf/en/
+
+Concept summary
+---------------
+
+.. tabbed:: Local Open-Needs instance
+
+    In this scenario **Open-Needs** is only used during build time of the documentation.
+
+    The **Open-Needs client** must be written in the programming language of the documentation framework (e.g. Java).
+    But as the **Open-Needs DB** is written in Python, there is a language independent REST API used for communication.
+
+    The goal is that the user/developer does not even notice that **Open-Needs DB** is started and stopped during the build.
+
+    .. uml::
+       :align: center
+
+        @startuml
+        skinparam nodesep 70
+        skinparam ranksep 50
+
+            artifact "**Documentation files**\n(md, rst, ...)" as docs #6af
+            card "**Documentation Framework**\n(MkDocs, AsciiDoc, Sphinx, ...)" as df #6af {
+                card "Parser" as parser
+                card "Open-Needs Client" as client #6fa {
+                    card "Client specific\ninterface" as interface
+
+                    card "Open-Needs DB" as on {
+                        cloud "**API**\n(REST based)" as rest
+                        card "**Need functions**:\n*validate\n*calculate\n*filter\n*represent" as func
+                        database "**Database**\n(SQLite)" as db
+
+                        rest <=> func
+                        func <=> db
+                    }
+                }
+                card "Builder" as builder
+            }
+
+
+            artifact "**Final documentation**\n(HTML, PDF, ...)" as final #6af
+
+            docs ==> parser
+            parser ==> interface
+            interface <=> rest
+
+            interface ==> builder
+
+            builder <==> final
+
+
+        @enduml
+
+.. tabbed:: Central Open-Needs instance
+
+    In this scenario there is a central **Open-Needs DB** server, running 24/7.
+
+    This is mostly needed for bigger companies, with strong processes regarding traceability and project steering.
+    It allows to work with the data also outside the documentation context and should support most requirements
+    regarding reporting, measurement and quality assurance.
+
+    It is also helpful for the developers, as **Open-Needs IDE** can be used to assist during the writing of
+    need objects in the documentation.
+    Or by giving access via **Open-Needs WebApp**, developers are  able to dynamically examine
+    and compare content of different projects.
+
+
+    .. uml::
+       :align: center
+
+        @startuml
+        skinparam nodesep 70
+        skinparam ranksep 50
+
+            card IDE as ide {
+                card "Open-Needs\nIDE extension" as ext #6fa
+                note right: verifies data,\nprovides previews,\nfollows links
+            }
+
+            artifact "**Documentation files**\n(md, rst, ...)" as docs #6af
+            card "**Documentation Framework**\n(MkDocs, AsciiDoc, Sphinx, ...)" as df #6af {
+                card "Parser" as parser
+                card "**Open-Needs**\n**Client**" as client #6fa
+                card "Builder" as builder
+            }
+
+            card "**Open-Needs DB**" as on #6fa {
+                cloud "**API**\n(REST based)" as rest
+                card "**Need functions**:\n*validate\n*calculate\n*filter\n*represent" as func
+                database "**Database**\n(SQL based)" as db
+
+                rest <=> func
+                func <=> db
+            }
+
+            artifact "**Final documentation**\n(HTML, PDF, ...)" as final #6af
+
+            card "Web browser" {
+                card "Open-Needs\nWebApp" as webapp #6fa
+                note right: Quick analysis\nand comparisons
+            }
+
+            ext .[#333]l.> docs: supports \nduring writing
+            docs ==> parser
+            parser ==> client
+            client => rest
+
+            rest => client
+            client ==> builder
+
+            builder <==> final
+
+            rest .[#333]u..> ext
+
+            rest .[#333]d..> webapp
+
+
+        @enduml
+
+
 
 Motivation
 ----------

@@ -41,7 +41,6 @@ preview_config = {
     # Each link on main body (article), but not if link is used for an image and
     # if link-target is github.com (does not allow iframe usage)
     "selector": "article p a:not(:has(>img),[href*='github.com'])",
-
     "not_selector": "div.needs_head a, h1 a, h2 a",
     "set_icon": True,
     "icon_only": True,
