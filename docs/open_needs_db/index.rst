@@ -31,6 +31,13 @@ It is designed to be used as backend in use-case specific tools like
 
 Different Interfaces can be build to access the data in different tools.
 
+.. toctree::
+   :hidden:
+
+   extensions
+   schemas
+
+
 Philosophy
 ----------
 - No strict schema for need data
@@ -100,6 +107,8 @@ trigger external systems.
 
 The goal is that an **Open-Needs** extension, can provide new features for backend and/or frontend.
 
+For more details, please take a look into :ref:`db_extensions`.
+
 Interfaces
 ----------
 Interfaces are a way to access the data of Open-Needs.
@@ -119,6 +128,20 @@ Therefore a user management including roles and permissions must be implemented.
 
 For the implementation of authentication mechanisms(e.g. OAuth2), FastAPI internal solutions shall be used.
 
+Schemas
+-------
+All tools of **Open-Needs** shall use json-schemas to define the structure of information.
+
+This kind of schema is mostly used for:
+
+* project configuration structure
+* project rules structure
+* needs data structure
+
+The goal is to allow any programming language to understand, analyse and validate Open-Needs data.
+
+For more details, please take a look into :ref:`db_json_schemas`.
+
 Database schema
 ---------------
 Main tables:
@@ -127,13 +150,13 @@ Main tables:
 * Projects
 * Needs
 
-.. uml:: pumls/db_models.puml
+.. uml:: ../pumls/db_models.puml
 
 Organisations
 ~~~~~~~~~~~~~
 A unity to represent a company or a project team.
 
-.. uml:: pumls/db_organisations_model.puml
+.. uml:: ../pumls/db_organisations_model.puml
 
 Projects
 ~~~~~~~~
@@ -142,7 +165,7 @@ Specifies a specific project inside an organisations.
 This should be normally related to a Sphinx project or any other technical project, which contains the source code
 for needs.
 
-.. uml:: pumls/db_projects_model.puml
+.. uml:: ../pumls/db_projects_model.puml
 
 Needs
 ~~~~~
@@ -158,7 +181,7 @@ database tables.
 
 The content of ``data`` is filterable by all common SQL-compliant databases.
 
-.. uml:: pumls/db_needs_model.puml
+.. uml:: ../pumls/db_needs_model.puml
 
 
 REST API
@@ -303,4 +326,4 @@ Therefore it uses as ORM `SQLAlchemy <https://www.sqlalchemy.org/>`__, which wor
     (as a lot of values may get calculated).
 
 
-.. include:: discussion.rst
+.. include:: ../discussion.rst

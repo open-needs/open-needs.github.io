@@ -7,7 +7,6 @@
 Concept and Ideas
 =================
 
-
 .. sidebar:: Tools & Extensions
 
    * `Open-Needs IDE <https://open-needs.org/open-needs-ide/>`_
@@ -325,7 +324,7 @@ For details about usage and configuration, please take a look into the related p
 
 .. toctree::
 
-    open_needs_db
+    open_needs_db/index
     open_needs_ide
     open_needs_webapp
 
