@@ -4,6 +4,9 @@
 
 **Status**: Concepts under development
 
+Open-Needs Concepts
+===================
+
 Open-Needs is a tool collection for docs-as-code based projects.
 It allows to create and maintain objects like requirements or specifications
 in tools like Sphinx, AsciiDoctor, MkDocs and more.
@@ -12,8 +15,53 @@ It's main goal is to provide the functionality of
 `Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io/en/latest/>`_ in a framework-independent way for all
 docs-as-code related tools.
 
-Open-Needs Concepts
-===================
+.. uml::
+   :align: center
+
+    @startuml
+    skinparam nodesep 70
+    skinparam ranksep 50
+
+        card IDE as ide {
+            card "Open-Needs\nIDE extension" as ext #6fa
+            note right: verifies data,\nprovides previews,\nfollows links
+        }
+
+        artifact "**Documentation files**\n(md, rst, ...)" as docs #6af
+        card "**Documentation Framework**\n(MkDocs, AsciiDoc, Sphinx, ...)" as df #6af {
+            card "Parser" as parser
+            card "Open-Needs Client" as client #6fa
+            card "Builder" as builder
+        }
+
+        card "**Open-Needs DB**" as on #6fa {
+            database "**Database**\n(SQL based)" as db
+            cloud "**API**\n(REST based)" as rest
+        }
+
+        artifact "**Final documentation**\n(HTML, PDF, ...)" as final #6af
+
+        card "Web browser" {
+            card "Open-Needs\nWebApp" as webapp #6fa
+            note right: Quick analysis\nand comparisons
+        }
+
+        ext -l-> docs: supports \nduring writing
+        docs --> parser
+        parser --> client
+        client -> rest
+        rest <-> db
+        rest -> client
+        client --> builder
+
+        builder <--> final
+
+        ext <.[#333]d..> rest
+
+        webapp <.[#333]u..> rest
+
+
+    @enduml
 
 .. sidebar:: Tools & Extensions
 
