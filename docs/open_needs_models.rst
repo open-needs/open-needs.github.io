@@ -69,7 +69,7 @@ Schema
 
 Domain configurations
 ---------------------
-**Open-Needs Domains** are a collection for need types, fields, checks and automatism, which are used to configure a
+**Open-Needs Domains** are a collection of need types, fields, checks and automatism, which are used to configure a
 project for one or multiple specific domains.
 
 With using domains a project gains the possibility to create and mange need objects for these domains.
@@ -107,8 +107,61 @@ Schema
        :file: models/domain_schema.json
        :expand:
 
+Need item
+---------
+A single need item contains mostly its own data.
+
+All dynamic elements (links, dynamic function) shall be resolved in the context of a specific documentation build/version.
+
+It does not contain any information about project/domain configuration.
+For this a :ref:`needs_container` must be used.
+
+Schema
+~~~~~~
+:name: Need schema
+:location: ``/models/needs_container_schema.json``
+:status: :badge:`work in progress,badge-primary`
+
+.. tabbed:: raw
+
+    .. literalinclude:: /models/needs_container_schema.json
+        :class: on_schema
+
+.. tabbed:: table
+
+    .. jsonschema:: models/needs_container_schema.json
+       :lift_title: false
+
+.. tabbed:: list
+
+    .. data-viewer::
+       :file: models/needs_container_schema.json
+       :expand:
+
+.. _needs_container:
+
 Needs container
 ---------------
+Needs can be created/imported via the documentation files or by a ``needs_container.json`` file.
+
+A **needs container** can be used to store data from external systems (like Jira or Codebeamer) and make it available
+in the docs-as-code environment.
+
+Also the **Open-Needs** tools are using this format to export their data, so that it can be used by scripts and other
+tools.
+
+A **needs container** only contains needs related information, this may be:
+
+* Needs: All exported needs in a list with their data
+* Needs Domain: needs related project configuration as **Open-Needs Domain** config (needed types, options)
+
+The exported **Domain** does contain information about the need configuration only.
+E.g. what types and options must be configured. It shall not contain none-need specific information like
+warnings, global values or automatism.
+
+A **needs container** contains the "executed" information of needs in a specific documentation context/run.
+All possible dynamic functions and references must be resolved.
+
 Schema
 ~~~~~~
 :name: Needs container schema
