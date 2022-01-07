@@ -11,6 +11,27 @@ from json-files, which may contain exported data from an issue tracking systems.
 
 Also the complete configuration of a project in **Open-Needs** shall be defined in json format and files.
 
+.. uml::
+   :align: center
+
+    @startuml
+    skinparam nodesep 50
+    skinparam ranksep 50
+
+        card "Project configuration" {
+            card "Domain/s" as domain
+        }
+
+        card "Needs container" {
+            card "Domain" as domain2
+            note bottom: Container specific
+            card "Need/s" as need
+        }
+
+        need -d-> domain2: based on
+
+    @enduml
+
 json-schema
 -----------
 
