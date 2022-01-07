@@ -8,8 +8,8 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
-   sodipodi:docname="open-needs-db-logo.svg"
-   inkscape:export-filename="/home/daniel/workspace/open-needs/open-needs.github.io/images/open-needs-ide-logo.png"
+   sodipodi:docname="open-needs-server-logo.svg"
+   inkscape:export-filename="/home/daniel/workspace/open-needs/open-needs.github.io/docs/_static/open-needs-server-logo.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -32,13 +32,13 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.8008768"
-     inkscape:cx="371.46787"
+     inkscape:cx="-20.60242"
      inkscape:cy="272.82598"
-     inkscape:window-width="1380"
-     inkscape:window-height="1082"
-     inkscape:window-x="483"
-     inkscape:window-y="146"
-     inkscape:window-maximized="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1388"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
      id="defs2" />
@@ -80,15 +80,15 @@
        sodipodi:nodetypes="cccccc" />
     <text
        xml:space="preserve"
-       style="font-size:48.4351px;line-height:0.85;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
-       x="144.89636"
-       y="110.96929"
+       style="font-size:26.6523px;line-height:0.85;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       x="152.85616"
+       y="103.32824"
        id="text4633"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:48.4351px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#000000;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
-         x="144.89636"
-         y="110.96929"
-         id="tspan4635">DB</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:26.6523px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#000000;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+         x="152.85616"
+         y="103.32824"
+         id="tspan4635">Server</tspan></text>
     <g
        id="g9601"
        transform="rotate(25.233035,70.201219,111.78493)">

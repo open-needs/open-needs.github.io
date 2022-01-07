@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://json-schema.org/draft-07/schema#",
+  "title": "Open-Needs Project schema",
+  "type": "object",
+  "properties": {
+    "title": {"type":  "string"},
+    "description": {"type":  "string"},
+    "url": {"type":  "string"},
+    "domains": {
+      "type": "object",
+      "patternProperties": {
+        "project": {"type":  "object"},
+        "^.*$": {
+          "type": "object",
+          "properties": {
+            "types": {"type": "object"},
+            "links": {"type": "object"},
+            "options": {"type": "object"},
+            "global_values": {"type": "object"}
+          }
+        }
+      }
+    }
+  }
+}

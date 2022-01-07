@@ -18,7 +18,7 @@ docs-as-code related tools.
 .. sidebar:: Tools & Extensions
 
    * `Open-Needs IDE <https://open-needs.org/open-needs-ide/>`_
-   * `Open-Needs DB <https://github.com/open-needs/open-needs-db>`_
+   * `Open-Needs Server <https://github.com/open-needs/open-needs-server>`_
 
 This documentation describes the concept and current ideas of Open-Needs, which realization starts
 in 2022.
@@ -48,9 +48,9 @@ Concept summary
     In this scenario **Open-Needs** is only used during build time of the documentation.
 
     The **Open-Needs client** must be written in the programming language of the documentation framework (e.g. Java).
-    But as the **Open-Needs DB** is written in Python, there is a language independent REST API used for communication.
+    But as the **Open-Needs Server** is written in Python, there is a language independent REST API used for communication.
 
-    The goal is that the user/developer does not even notice that **Open-Needs DB** is started and stopped during the build.
+    The goal is that the user/developer does not even notice that **Open-Needs Server** is started and stopped during the build.
 
     .. uml::
        :align: center
@@ -65,7 +65,7 @@ Concept summary
                 card "Open-Needs Client" as client #6fa {
                     card "Client specific\ninterface" as interface
 
-                    card "Open-Needs DB" as on {
+                    card "Open-Needs Server" as on {
                         cloud "**API**\n(REST based)" as rest
                         card "**Need functions**:\n*validate\n*calculate\n*filter\n*represent" as func
                         database "**Database**\n(SQLite)" as db
@@ -93,7 +93,7 @@ Concept summary
 
 .. tabbed:: Central Open-Needs instance
 
-    In this scenario there is a central **Open-Needs DB** server, running 24/7.
+    In this scenario there is a central **Open-Needs Server** server, running 24/7.
 
     This is mostly needed for bigger companies, with strong processes regarding traceability and project steering.
     It allows to work with the data also outside the documentation context and should support most requirements
@@ -124,7 +124,7 @@ Concept summary
                 card "Builder" as builder
             }
 
-            card "**Open-Needs DB**" as on #6fa {
+            card "**Open-Needs Server**" as on #6fa {
                 cloud "**API**\n(REST based)" as rest
                 card "**Need functions**:\n*validate\n*calculate\n*filter\n*represent" as func
                 database "**Database**\n(SQL based)" as db
@@ -261,19 +261,19 @@ Solution
 As solution for the above problems, a Database is planned, which can store all kind of **need**-objects, separated
 by project and able to provide all needed information via a REST-API.
 
-The database project is called **Open-Needs DB**.
+The database project is called **Open-Needs Server**.
 
 Additionally specific interfaces shall be created, to make the database features and data available for different
 documentation-generators like AsciiDoc or MkDocs. **Sphinx-Needs** will be also updated to support
-**Open-Needs DB** in advance to its own, internal storage format.
+**Open-Needs Server** in advance to its own, internal storage format.
 
-The following flow chart illustrates how the upcoming workflow looks like when using Sphinx-Needs and Open-Needs DB:
+The following flow chart illustrates how the upcoming workflow looks like when using Sphinx-Needs and Open-Needs Server:
 
 .. uml::
    :scale: 99%
 
     @startuml
-    card "Open-Needs DB" as db #6fa{
+    card "Open-Needs Server" as db #6fa{
 
         card "REST API" as rest
         database "SQL DB" as sql
@@ -327,7 +327,7 @@ Or an extension for VS Code. Or a web interface. Or an Excel reader. It simply s
    :scale: 99%
 
    @startuml
-    card "Open-Needs DB" as db #aaaaaa {
+    card "Open-Needs Server" as db #aaaaaa {
         card "REST API" as rest
         database "SQL DB" as sql
     }
@@ -412,7 +412,7 @@ There are ways to import e.g. Jira tickets, github issues and other sources, but
 build, which can become a huge problem, if the documentation is changed by dozens of engineers with hundreds of daily
 builds. The needed amount of requests against the source system would be much too big.
 
-The **Open-Needs DB** shall provide ways to import data from external sources only once and share it with each
+The **Open-Needs Server** shall provide ways to import data from external sources only once and share it with each
 developer / documentation build.
 
 IDE / Dev support
@@ -438,7 +438,7 @@ Nowadays software is often reusing existing code, provided in libraries or copie
 Therefore already existing need objects can be helpful to describe the required need objects for the current project.
 Also taking a look into need objects of similar projects may help to write better requirements or specifications.
 
-The **Open-Needs DB** will have all this information and by providing IDE extensions, this information can be
+The **Open-Needs Server** will have all this information and by providing IDE extensions, this information can be
 used to write better need objects faster.
 
 
@@ -451,8 +451,10 @@ For details about usage and configuration, please take a look into the related p
 
 .. toctree::
 
-    open_needs_db/index
+    open_needs_server/index
+    open_needs_models
     open_needs_ide
     open_needs_webapp
+    contribute
 
 .. include:: discussion.rst

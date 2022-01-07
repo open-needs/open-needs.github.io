@@ -45,3 +45,8 @@ span.sp_preview_icon {
 span.sp_preview_icon:hover {
     color: #555555;
 }
+
+/* Max code block height for schemas */
+div.on-schema pre {
+    max-height: 500px;
+}

@@ -1,5 +1,5 @@
-Open-Needs WebApp concept
-=========================
+Open-Needs WebApp
+=================
 
 .. sidebar:: Logo
 

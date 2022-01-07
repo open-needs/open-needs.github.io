@@ -1,5 +1,5 @@
-Open-Needs IDE concept
-======================
+Open-Needs IDE
+==============
 
 .. sidebar:: Logo
 
@@ -35,7 +35,7 @@ Motivation
 It shall support autocompletion, following need references, syntax checks and much more.
 
 For most of this tasks a technical knowledge about existing needs and their configuration is needed, so that
-**Open-Needs IDE** communicates with **Open-Needs DB**.
+**Open-Needs IDE** communicates with **Open-Needs Server**.
 
 Architecture
 ------------

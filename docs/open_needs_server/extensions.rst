@@ -3,10 +3,10 @@
 Extensions
 ==========
 
-**Open-Needs DB** shall be as simple as possibile, to provide basic functionality in a secured way.
-However, there are a lot of ideas how to extend **Open-Needs DB** to support more complex or user specific features.
+**Open-Needs Server** shall be as simple as possibile, to provide basic functionality in a secured way.
+However, there are a lot of ideas how to extend **Open-Needs Server** to support more complex or user specific features.
 
-Therefore **Open-Needs DB** will have an extension mechanism, which allows to load extensions during start-up phase
+Therefore **Open-Needs Server** will have an extension mechanism, which allows to load extensions during start-up phase
 (no hot plug in during runtime).
 
 Features
@@ -31,7 +31,7 @@ A list of ideas, which could be realized by **Open-Needs Extensions**:
 * **Open-Needs Auth**: Check Authentication and Authorization on need level
   (e.g. is "user x" allowed to modify field "status" of "need y"?)
 
-Some of these extension ideas may be integrated into **Open-Needs DB** by default (as internal extensions).
+Some of these extension ideas may be integrated into **Open-Needs Server** by default (as internal extensions).
 
 Technology stack
 ----------------

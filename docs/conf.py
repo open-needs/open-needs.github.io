@@ -33,6 +33,8 @@ extensions = [
     "sphinxcontrib.httpdomain",
     "sphinx_disqus.disqus",
     "sphinx_preview",
+    "sphinx-jsonschema",
+    "sphinx_data_viewer",
 ]
 
 disqus_shortname = "open-needs-org"
@@ -40,7 +42,7 @@ disqus_shortname = "open-needs-org"
 preview_config = {
     # Each link on main body (article), but not if link is used for an image and
     # if link-target is github.com (does not allow iframe usage)
-    "selector": "article p a:not(:has(>img),[href*='github.com'])",
+    "selector": "article p a:not(:has(>img),[href*='github.com'],[href*='githubusercontent'])",
     "not_selector": "div.needs_head a, h1 a, h2 a",
     "set_icon": True,
     "icon_only": True,
@@ -61,7 +63,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'includes']
 
 # -- Options for HTML output -------------------------------------------------
 

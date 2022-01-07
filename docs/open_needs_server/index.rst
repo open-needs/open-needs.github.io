@@ -1,30 +1,17 @@
-Open-Needs DB concept
-=====================
+Open-Needs Server
+=================
 
 .. sidebar:: Logo
 
-   .. image:: /_static/open-needs-db-logo.png
+   .. image:: /_static/open-needs-server-logo.png
       :align: center
       :width: 200px
 
 :status: :badge:`work in progress,badge-primary`
-:repository: https://github.com/open-needs/open-needs-db
+:repository: https://github.com/open-needs/open-needs-server
 :user documentation: tbd
 
-.. dropdown:: To be discussed
-
-   This is a list of open questions regarding the concept of this page.
-
-   * Version support
-
-     * Not sure if Open-Needs shall deal with **version** or not. As it may be not needed for simple projects (dw)
-     * Also the name "version" is not smart, as it is often used by the projects itself to link e.g. a requirement
-       to a product version. But we are talking about "documentation version", so the version of the documentation,
-       which contains the need. I have the feeling that this is more or less an internal var, so that we maybe call
-       it "doc_version" and it shall be set automatically by each interface when talking with **Open-Need DB**. (dw)
-
-
-**Open-Needs DB** is a REST based Database to create, manage, link and automate life cycle objects.
+**Open-Needs Server** is a REST based Database to create, manage, link and automate life cycle objects.
 
 It is designed to be used as backend in use-case specific tools like
 `Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io/en/latest/>`__.
@@ -35,7 +22,6 @@ Different Interfaces can be build to access the data in different tools.
    :hidden:
 
    extensions
-   schemas
 
 
 Philosophy
@@ -48,7 +34,7 @@ Extensions and interfaces may introduce functions to e.g. check project rules be
 
 Event system
 ------------
-**Open-Needs DB** is based on an event system, which is used to execute internal functions but also functions from
+**Open-Needs Server** is based on an event system, which is used to execute internal functions but also functions from
 extensions or other sources. All functions have to be registered via the Open-Needs API.
 
 Current events are:
@@ -119,7 +105,7 @@ to support Open-Needs.
 
 Security
 --------
-The data inside **Open-Needs DB** must be secured and access and edit rights must be controllable.
+The data inside **Open-Needs Server** must be secured and access and edit rights must be controllable.
 
 Example: Not all users shall be allowed to update needs for release version (e.g. Product_1.0), but for "sub-versions"
 (e.g. 1.0_dev_feature_x).
@@ -140,7 +126,7 @@ This kind of schema is mostly used for:
 
 The goal is to allow any programming language to understand, analyse and validate Open-Needs data.
 
-For more details, please take a look into :ref:`db_json_schemas`.
+For more details, please take a look into :ref:`models`.
 
 Database schema
 ---------------
@@ -299,7 +285,7 @@ Filtering
 
 Technology Stack
 ----------------
-**Open-Needs DB** will be based on `FastAPI <https://fastapi.tiangolo.com/>`__, which provides all needed functionality
+**Open-Needs Server** will be based on `FastAPI <https://fastapi.tiangolo.com/>`__, which provides all needed functionality
 for the API.
 
 FastAPI
@@ -314,7 +300,7 @@ A great list of FastAPI links can be found at https://github.com/mjhea0/awesome-
 
 Database
 ~~~~~~~~
-**Open-Needs DB** shall be based on **SQL** and support most **SQL**-based databases, like SQLite and PostgreSQL.
+**Open-Needs Server** shall be based on **SQL** and support most **SQL**-based databases, like SQLite and PostgreSQL.
 
 Therefore it uses as ORM `SQLAlchemy <https://www.sqlalchemy.org/>`__, which works pretty good with FastAPI.
 
@@ -322,7 +308,7 @@ Therefore it uses as ORM `SQLAlchemy <https://www.sqlalchemy.org/>`__, which wor
 
     Projects like `SQLModel <https://sqlmodel.tiangolo.com/>`__ which allows to reuse the same model-definition for
     FastAPI routes and database models, shall not be used. Mostly because of the lack of customization, missing features
-    (JSON fields) and because the models/schemas of  **Open-Needs DB** may differ between FastAPI and SQLAlchemy
+    (JSON fields) and because the models/schemas of  **Open-Needs Server** may differ between FastAPI and SQLAlchemy
     (as a lot of values may get calculated).
 
 
