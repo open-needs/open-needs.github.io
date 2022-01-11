@@ -69,6 +69,7 @@ name.
 Schema
 ~~~~~~
 :name: Project schema
+:uri: https://open-needs.org/project.schema.json
 :location: ``/models/project.schema.json``
 :status: :badge:`work in progress,badge-primary`
 
@@ -109,6 +110,7 @@ Examples for domains are:
 Schema
 ~~~~~~
 :name: Domain schema
+:uri: https://open-needs.org/domain.schema.json
 :location: ``/models/domain.schema.json``
 :status: :badge:`work in progress,badge-primary`
 
@@ -140,23 +142,24 @@ For this a :ref:`needs_container` must be used.
 Schema
 ~~~~~~
 :name: Need schema
-:location: ``/models/needs_container.schema.json``
+:uri: https://open-needs.org/need.schema.json
+:location: ``/models/need.schema.json``
 :status: :badge:`work in progress,badge-primary`
 
 .. tabbed:: raw
 
-    .. literalinclude:: /models/needs_container.schema.json
+    .. literalinclude:: /models/need.schema.json
         :class: on_schema
 
 .. tabbed:: table
 
-    .. jsonschema:: models/needs_container.schema.json
+    .. jsonschema:: models/need.schema.json
        :lift_title: false
 
 .. tabbed:: list
 
     .. data-viewer::
-       :file: models/needs_container.schema.json
+       :file: models/need.schema.json
        :expand:
 
 .. _needs_container:
@@ -186,6 +189,7 @@ All possible dynamic functions and references must be resolved.
 Schema
 ~~~~~~
 :name: Needs container schema
+:uri: https://open-needs.org/needs_container.schema.json
 :location: ``/models/needs_container.schema.json``
 :status: :badge:`work in progress,badge-primary`
 
