@@ -69,23 +69,23 @@ name.
 Schema
 ~~~~~~
 :name: Project schema
-:location: ``/models/project_schema.json``
+:location: ``/models/project.schema.json``
 :status: :badge:`work in progress,badge-primary`
 
 .. tabbed:: raw
 
-    .. literalinclude:: /models/project_schema.json
+    .. literalinclude:: /models/project.schema.json
         :class: on_schema
 
 .. tabbed:: table
 
-    .. jsonschema:: models/project_schema.json
+    .. jsonschema:: models/project.schema.json
        :lift_title: false
 
 .. tabbed:: list
 
     .. data-viewer::
-       :file: models/project_schema.json
+       :file: models/project.schema.json
        :expand:
 
 Domain configurations
@@ -109,23 +109,23 @@ Examples for domains are:
 Schema
 ~~~~~~
 :name: Domain schema
-:location: ``/models/domain_schema.json``
+:location: ``/models/domain.schema.json``
 :status: :badge:`work in progress,badge-primary`
 
 .. tabbed:: raw
 
-    .. literalinclude:: /models/domain_schema.json
+    .. literalinclude:: /models/domain.schema.json
        :class: on_schema
 
 .. tabbed:: table
 
-    .. jsonschema:: models/domain_schema.json
+    .. jsonschema:: models/domain.schema.json
        :lift_title: false
 
 .. tabbed:: list
 
     .. data-viewer::
-       :file: models/domain_schema.json
+       :file: models/domain.schema.json
        :expand:
 
 Need item
@@ -140,23 +140,23 @@ For this a :ref:`needs_container` must be used.
 Schema
 ~~~~~~
 :name: Need schema
-:location: ``/models/needs_container_schema.json``
+:location: ``/models/needs_container.schema.json``
 :status: :badge:`work in progress,badge-primary`
 
 .. tabbed:: raw
 
-    .. literalinclude:: /models/needs_container_schema.json
+    .. literalinclude:: /models/needs_container.schema.json
         :class: on_schema
 
 .. tabbed:: table
 
-    .. jsonschema:: models/needs_container_schema.json
+    .. jsonschema:: models/needs_container.schema.json
        :lift_title: false
 
 .. tabbed:: list
 
     .. data-viewer::
-       :file: models/needs_container_schema.json
+       :file: models/needs_container.schema.json
        :expand:
 
 .. _needs_container:
@@ -186,23 +186,23 @@ All possible dynamic functions and references must be resolved.
 Schema
 ~~~~~~
 :name: Needs container schema
-:location: ``/models/needs_container_schema.json``
+:location: ``/models/needs_container.schema.json``
 :status: :badge:`work in progress,badge-primary`
 
 .. tabbed:: raw
 
-    .. literalinclude:: /models/needs_container_schema.json
+    .. literalinclude:: /models/needs_container.schema.json
         :class: on_schema
 
 .. tabbed:: table
 
-    .. jsonschema:: models/needs_container_schema.json
+    .. jsonschema:: models/needs_container.schema.json
        :lift_title: false
 
 .. tabbed:: list
 
     .. data-viewer::
-       :file: models/needs_container_schema.json
+       :file: models/needs_container.schema.json
        :expand:
 
 Sphinx-Needs schema
