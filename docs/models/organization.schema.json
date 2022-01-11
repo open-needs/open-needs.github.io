@@ -23,7 +23,7 @@
     "projects": {
       "description": "A list of projects belonging to the organization",
       "type": "array",
-       "items": {
+      "items": {
          "$ref": "https://open-needs.org/project.schema.json"
        }
     }

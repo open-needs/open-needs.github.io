@@ -11,52 +11,15 @@ from json-files, which may contain exported data from an issue tracking systems.
 
 Also the complete configuration of a project in **Open-Needs** shall be defined in json format and files.
 
-.. uml::
-   :align: center
+.. tabbed:: Models
 
-    @startuml
-    skinparam nodesep 50
-    skinparam ranksep 50
+    .. uml:: pumls/models_overview.puml
+       :align: center
 
-        artifact "organization.schema" as s_org  #6fa
-        artifact "project.schema" as s_project  #6fa
-        artifact "domain.schema" as s_domain  #6fa
-        artifact "needs_container.schema" as s_need_cont  #6fa
-        artifact "need.schema" as s_need  #6fa
+.. tabbed:: Models with Schemas
 
-        card "Organization setup" as org {
-            card "Project/s" as projects
-        }
-
-        card "Project configuration" as project{
-            card "Own Domain" as domain_own
-            card "Domain/s" as domains
-        }
-
-        card "Domain\nconfiguration" as domain
-
-        card "Needs container" as cont {
-            card "Domain" as domain2
-            note bottom: Container specific
-            card "Need/s" as need
-        }
-
-        need -d-> domain2: based on
-
-        projects => project : references
-        domains ===> domain : references
-
-        ''Schema links
-
-        s_org --> org : describes
-        s_project --> project : describes
-        s_domain --> domain : describes
-        s_domain --> domain2 : describes
-        s_domain --> domain_own : describes
-        s_need_cont --> cont : describes
-        s_need --> need : describes
-
-    @enduml
+    .. uml:: pumls/models_overview_with_schemas.puml
+       :align: center
 
 json-schema
 -----------

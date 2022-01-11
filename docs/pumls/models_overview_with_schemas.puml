@@ -1,0 +1,24 @@
+@startuml
+skinparam nodesep 50
+skinparam ranksep 50
+!include models_overview.puml
+
+    artifact "organization.schema" as s_org  #6fa
+    artifact "project.schema" as s_project  #6fa
+    artifact "domain.schema" as s_domain  #6fa
+    artifact "needs_container.schema" as s_need_cont  #6fa
+    artifact "need.schema" as s_need  #6fa
+
+    ''Schema links
+
+    s_org --> org : describes
+    s_project --> project : describes
+    s_domain --> domain : describes
+    s_domain --> domain2 : describes
+    s_domain --> domain_own : describes
+    s_need_cont --> cont : describes
+    s_need --> needs : describes
+    s_need --> need : describes
+    s_need --> pr_needs : describes
+
+@enduml

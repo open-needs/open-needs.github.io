@@ -1,0 +1,30 @@
+@startuml
+skinparam nodesep 50
+skinparam ranksep 50
+
+    card "Organization" as org  #6af {
+        card "Project/s" as projects
+    }
+
+    card "Project" as project #6af{
+        card "Own Domain" as domain_own
+        card "Domain/s" as domains
+        card "Needs" as pr_needs
+    }
+
+    rectangle "Domain" as domain #6af
+
+    card "Needs container" as cont #6af {
+        card "Domain" as domain2
+        note bottom: Container specific
+        card "Need/s" as needs
+    }
+
+    rectangle "Need" as need #6af
+
+    needs -d-> domain2: based on
+
+    projects => project : references
+    domains ===> domain : references
+
+@enduml
