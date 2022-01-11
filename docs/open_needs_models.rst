@@ -18,17 +18,43 @@ Also the complete configuration of a project in **Open-Needs** shall be defined 
     skinparam nodesep 50
     skinparam ranksep 50
 
-        card "Project configuration" {
-            card "Domain/s" as domain
+        artifact "organization.schema" as s_org  #6fa
+        artifact "project.schema" as s_project  #6fa
+        artifact "domain.schema" as s_domain  #6fa
+        artifact "needs_container.schema" as s_need_cont  #6fa
+        artifact "need.schema" as s_need  #6fa
+
+        card "Organization setup" as org {
+            card "Project/s" as projects
         }
 
-        card "Needs container" {
+        card "Project configuration" as project{
+            card "Own Domain" as domain_own
+            card "Domain/s" as domains
+        }
+
+        card "Domain\nconfiguration" as domain
+
+        card "Needs container" as cont {
             card "Domain" as domain2
             note bottom: Container specific
             card "Need/s" as need
         }
 
         need -d-> domain2: based on
+
+        projects => project : references
+        domains ===> domain : references
+
+        ''Schema links
+
+        s_org --> org : describes
+        s_project --> project : describes
+        s_domain --> domain : describes
+        s_domain --> domain2 : describes
+        s_domain --> domain_own : describes
+        s_need_cont --> cont : describes
+        s_need --> need : describes
 
     @enduml
 
@@ -46,6 +72,35 @@ E.g. a project configuration, stored as ``open_needs_project_conf.json``, which 
 json-schema will not be used to validate REST API requests or the content of the database.
 It is mostly used to validate files, which are used inside a docs-as-code approach to keep information in files and
 therefore also on git repositories.
+
+Organization configurations
+---------------------------
+An organization is an unique entity, which contains mostly projects only.
+
+It may be used in future for common configuration of projects, which belong to one organization.
+
+Schema
+~~~~~~
+:name: Organization schema
+:uri: https://open-needs.org/organization.schema.json
+:location: ``/models/organization.schema.json``
+:status: :badge:`work in progress,badge-primary`
+
+.. tabbed:: raw
+
+    .. literalinclude:: /models/organization.schema.json
+        :class: on_schema
+
+.. tabbed:: table
+
+    .. jsonschema:: models/organization.schema.json
+       :lift_title: false
+
+.. tabbed:: list
+
+    .. data-viewer::
+       :file: models/organization.schema.json
+       :expand:
 
 Project configurations
 ----------------------

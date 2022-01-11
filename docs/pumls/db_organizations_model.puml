@@ -1,5 +1,5 @@
 @startuml
-    class Organisations {
+    class Organizations {
         - id: unique int
         + org_id: unique str
         + name: str

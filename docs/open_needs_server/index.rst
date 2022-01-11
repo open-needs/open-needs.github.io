@@ -132,21 +132,21 @@ Database schema
 ---------------
 Main tables:
 
-* Organisations
+* Organizations
 * Projects
 * Needs
 
 .. uml:: ../pumls/db_models.puml
 
-Organisations
+Organizations
 ~~~~~~~~~~~~~
 A unity to represent a company or a project team.
 
-.. uml:: ../pumls/db_organisations_model.puml
+.. uml:: ../pumls/db_organizations_model.puml
 
 Projects
 ~~~~~~~~
-Specifies a specific project inside an organisations.
+Specifies a specific project inside an organizations.
 
 This should be normally related to a Sphinx project or any other technical project, which contains the source code
 for needs.
@@ -157,7 +157,7 @@ Needs
 ~~~~~
 Stores the final needs.
 
-Each row is a need, linked to a specific project of an organisation.
+Each row is a need, linked to a specific project of an organization.
 
 Only title and content get stored as columns. The rest of the data is stored in a single ``data`` column of type
 ``JSON``.
@@ -187,27 +187,27 @@ All REST API endpoint has the following, common config:
 A complete list of all defined routes can be found here: :ref:`routingtable`.
 
 
-Organisations
+Organizations
 ~~~~~~~~~~~~~
 .. http:get:: /
 
-   Lists all available organisations
+   Lists all available organizations
 
    :example: https://api.open-needs.org/
 
 .. http:post:: /
 
-   Creates a new organisation
+   Creates a new organization
 
 .. http:get:: /(str:org_id)
 
-   Returns information of specific organisation, including all projects.
+   Returns information of specific organization, including all projects.
 
    :example: https://api.open-needs.org/rocketLabs
 
 .. http:put:: /(str:org_id)
 
-   Updates an existing organisation
+   Updates an existing organization
 
    :example: https://api.open-needs.org/rocketLabs
 
@@ -216,11 +216,11 @@ Projects
 
 .. http:post:: /(str:org_id)
 
-   Creates a new project inside the given organisation.
+   Creates a new project inside the given organization.
 
 .. http:get:: /(str:org_id)/(str:project_id)
 
-   Returns information of a specific project inside an organisation.
+   Returns information of a specific project inside an organization.
    Includes:
 
    * configs
@@ -244,7 +244,7 @@ Open-Needs automatically collects this information and knows, which versions are
 
 .. http:get:: /(str:org_id)/(str:project_id)/(str:version)
 
-   Returns all needs of a given version inside a specific project of an organisation.
+   Returns all needs of a given version inside a specific project of an organization.
 
    :example: https://api.open-needs.org/rocketLabs/neptune3000/2.1.1
 

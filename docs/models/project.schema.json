@@ -4,7 +4,9 @@
   "title": "Open-Needs Project schema",
   "type": "object",
   "properties": {
-    "title": {"type":  "string"},
+    "title": {
+      "description": "An unique title inside an organization",
+      "type":  "string"},
     "description": {"type":  "string"},
     "url": {"type":  "string"},
     "domains": {

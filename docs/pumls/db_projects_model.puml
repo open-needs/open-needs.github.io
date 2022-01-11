@@ -1,7 +1,7 @@
 @startuml
     class Projects {
         - id: unique int
-        + **organisation**: ref to **Organisations**
+        + **organization**: ref to **Organizations**
         + project_id: unique str
         + name: str
         + description: str

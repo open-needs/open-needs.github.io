@@ -61,7 +61,7 @@ Bulk changes shall be not supported in the first versions.
         {* Open-Needs WebApp  }
         { **User**: | Mister X | [ Logout ] }
         ~~
-        { **Selector**: |^organisation^ | / | ^project^ | }
+        { **Selector**: |^organization^ | / | ^project^ | }
         ~~
         { **Filter**: | "version=='1.0 and status=='open'"}
         ~~
@@ -104,19 +104,19 @@ URLs
 
 .. http:get:: /(str:org_id)/
 
-   Shows the main page with the selected organisation from the url
+   Shows the main page with the selected organization from the url
 
    :example: https://app.open-needs.org/rocketLabs
 
 .. http:get:: /(str:org_id)/(str:project)
 
-   Shows the main page with the selected organisation and project from the url
+   Shows the main page with the selected organization and project from the url
 
    :example: https://app.open-needs.org/rocketLabs/neptune3000
 
 .. http:get:: /(str:org_id)/(str:project)?filter=
 
-   Shows the main page with the selected organisation and project from the url
+   Shows the main page with the selected organization and project from the url
 
    :query filter: An Open-Needs Query Language (ONQL) string
 

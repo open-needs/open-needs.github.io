@@ -1,11 +1,11 @@
 @startuml
-!include db_organisations_model.puml
+!include db_organizations_model.puml
 !include db_projects_model.puml
 !include db_needs_model.puml
 
 
 Needs::project -> Projects::id
-Projects::organisations -> Organisations::id
+Projects::organizations -> Organizations::id
 
 
 @enduml
