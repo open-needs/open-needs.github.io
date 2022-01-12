@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://open-needs.org/need.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-needs.org/need.schema.json",
   "title": "Open-Needs Need schema",
   "type": "object",
   "properties": {}
