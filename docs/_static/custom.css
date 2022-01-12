@@ -50,3 +50,8 @@ span.sp_preview_icon:hover {
 div.on-schema pre {
     max-height: 500px;
 }
+
+div.open-needs-badges a {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
