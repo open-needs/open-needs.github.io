@@ -3,7 +3,7 @@
 Extensions
 ==========
 
-**Open-Needs Server** shall be as simple as possibile, to provide basic functionality in a secured way.
+**Open-Needs Server** shall be as simple as possible, to provide basic functionality in a secured way.
 However, there are a lot of ideas how to extend **Open-Needs Server** to support more complex or user specific features.
 
 Therefore **Open-Needs Server** will have an extension mechanism, which allows to load extensions during start-up phase

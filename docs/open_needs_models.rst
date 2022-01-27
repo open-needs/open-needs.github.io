@@ -65,6 +65,14 @@ Schema
        :file: models/organization.schema.json
        :expand:
 
+.. tabbed:: image
+
+   .. uml::
+
+        @startjson
+        !include models/organization.schema.json
+        @endjson
+
 Project configurations
 ----------------------
 In **Open-Needs** a project configuration contains the configuration for the following elements:
@@ -107,6 +115,14 @@ Schema
        :file: models/project.schema.json
        :expand:
 
+.. tabbed:: image
+
+   .. uml::
+
+        @startjson
+        !include models/project.schema.json
+        @endjson
+
 Domain configurations
 ---------------------
 **Open-Needs Domains** are a collection of need types, fields, checks and automatism, which are used to configure a
@@ -148,6 +164,14 @@ Schema
        :file: models/domain.schema.json
        :expand:
 
+.. tabbed:: image
+
+   .. uml::
+
+        @startjson
+        !include models/domain.schema.json
+        @endjson
+
 Need item
 ---------
 A single need item contains mostly its own data.
@@ -179,6 +203,14 @@ Schema
     .. data-viewer::
        :file: models/need.schema.json
        :expand:
+
+.. tabbed:: image
+
+   .. uml::
+
+        @startjson
+        !include models/need.schema.json
+        @endjson
 
 .. _needs_container:
 
@@ -226,6 +258,14 @@ Schema
     .. data-viewer::
        :file: models/needs_container.schema.json
        :expand:
+
+.. tabbed:: image
+
+   .. uml::
+
+        @startjson
+        !include models/needs_container.schema.json
+        @endjson
 
 Sphinx-Needs schema
 -------------------

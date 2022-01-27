@@ -24,6 +24,45 @@ Different Interfaces can be build to access the data in different tools.
    extensions
 
 
+.. uml::
+
+    @startuml
+    skinparam nodesep 20
+    skinparam ranksep 100
+    node "Open-Needs Server" as server #6fa {
+        card Security #fff {
+            card "Users"
+            card "Roles"
+            card "Authentication\n& Authorization"
+        }
+
+        card Interfaces as int #fff {
+            card "REST API"
+            card "Python API\nfor plugins"
+        }
+
+        card "Event system" as event #fff {
+            card "Handlers"
+            card "Dispatcher"
+        }
+
+        card "Plugin system" as plugins #fff {
+            card "Registration"
+            card "API access"
+        }
+
+        card Configuration as conf #fff {
+            card "JSON based"
+        }
+
+        int -[hidden]-> conf
+        plugins -[hidden]-> event
+
+    }
+
+    @enduml
+
+
 Philosophy
 ----------
 - No strict schema for need data
@@ -32,55 +71,43 @@ Philosophy
 This philosophy is for this project only.
 Extensions and interfaces may introduce functions to e.g. check project rules before a Need gets stored in the Database.
 
-Event system
-------------
-**Open-Needs Server** is based on an event system, which is used to execute internal functions but also functions from
-extensions or other sources. All functions have to be registered via the Open-Needs API.
 
-Current events are:
+Technology Stack
+----------------
+**Open-Needs Server** will be based on `FastAPI <https://fastapi.tiangolo.com/>`__, which provides all needed functionality
+for the API.
 
-* Lib handling
+FastAPI
+~~~~~~~
 
-  * ``open_needs_init``
-  * ``open_needs_init_done``
-  * ``open_needs_loading_extensions``
-  * ``open_needs_loading_extensions_done``
-  * ``open_needs_shutdown``
-  * ``open_needs_shutdown_done``
+Useful FastAPI extensions may be:
 
-* Database handling
+* `FastAPI Permissions <https://github.com/holgi/fastapi-permissions>`__
+* `FastAPI Users <https://github.com/fastapi-users/fastapi-users>`__
+* `FastAPI Events <https://github.com/melvinkcx/fastapi-events>`__
 
-  * ``database_open``
-  * ``database_open_done``
-  * ``database_close``
-  * ``database_close_done``
+A great list of FastAPI links can be found at https://github.com/mjhea0/awesome-fastapi.
 
-* Project handling
+Database
+~~~~~~~~
+**Open-Needs Server** shall be based on **SQL** and support most **SQL**-based databases, like SQLite and PostgreSQL.
 
-  * ``project_create``
-  * ``project_create_done``
-  * ``project_read``
-  * ``project_read_done``
-  * ``project_change``
-  * ``project_change_done``
-  * ``project_delete``
-  * ``project_delete_done``
+Therefore it uses as ORM `SQLAlchemy <https://www.sqlalchemy.org/>`__, which works pretty good with FastAPI.
 
-* Needs handling
+.. hint::
 
-  * ``need_create``
-  * ``need_create_done``
-  * ``need_read``
-  * ``need_read_done``
-  * ``need_change``
-  * ``need_change_done``
-  * ``need_delete``
-  * ``need_delete_done``
+    Projects like `SQLModel <https://sqlmodel.tiangolo.com/>`__ which allows to reuse the same model-definition for
+    FastAPI routes and database models, shall not be used. Mostly because of the lack of customization, missing features
+    (JSON fields) and because the models/schemas of  **Open-Needs Server** may differ between FastAPI and SQLAlchemy
+    (as a lot of values may get calculated).
 
-**Attention**: It is not allowed to make any object manipulations on events with postfix ``_done``.
-Events with ``_done`` are mostly for notification and to update additional objects, like some metrics.
+Configuration
+~~~~~~~~~~~~~
+To load and handle configurations from multiple files and source (files, ENV, cli), **Open-Needs Server** will use
+the great and well documented Python library **Dynconf** for this.
 
-If events are missing, feel free to create a PR.
+* `Dynaconf <https://www.dynaconf.com/>`__
+* `Dynaconf example <https://github.com/rochacbruno/learndynaconf>`__
 
 Extensions
 ----------
@@ -283,33 +310,54 @@ Filtering
    :example: https://api.open-needs.org/filter
 
 
-Technology Stack
-----------------
-**Open-Needs Server** will be based on `FastAPI <https://fastapi.tiangolo.com/>`__, which provides all needed functionality
-for the API.
+Event system
+------------
+**Open-Needs Server** is based on an event system, which is used to execute internal functions but also functions from
+extensions or other sources. All functions have to be registered via the Open-Needs API.
 
-FastAPI
-~~~~~~~
+Current events are:
 
-Useful FastAPI extensions may be:
+* Lib handling
 
-* `FastAPI Permissions <https://github.com/holgi/fastapi-permissions>`__
-* `FastAPI Users <https://github.com/fastapi-users/fastapi-users>`__
+  * ``open_needs_init``
+  * ``open_needs_init_done``
+  * ``open_needs_loading_extensions``
+  * ``open_needs_loading_extensions_done``
+  * ``open_needs_shutdown``
+  * ``open_needs_shutdown_done``
 
-A great list of FastAPI links can be found at https://github.com/mjhea0/awesome-fastapi.
+* Database handling
 
-Database
-~~~~~~~~
-**Open-Needs Server** shall be based on **SQL** and support most **SQL**-based databases, like SQLite and PostgreSQL.
+  * ``database_open``
+  * ``database_open_done``
+  * ``database_close``
+  * ``database_close_done``
 
-Therefore it uses as ORM `SQLAlchemy <https://www.sqlalchemy.org/>`__, which works pretty good with FastAPI.
+* Project handling
 
-.. hint::
+  * ``project_create``
+  * ``project_create_done``
+  * ``project_read``
+  * ``project_read_done``
+  * ``project_change``
+  * ``project_change_done``
+  * ``project_delete``
+  * ``project_delete_done``
 
-    Projects like `SQLModel <https://sqlmodel.tiangolo.com/>`__ which allows to reuse the same model-definition for
-    FastAPI routes and database models, shall not be used. Mostly because of the lack of customization, missing features
-    (JSON fields) and because the models/schemas of  **Open-Needs Server** may differ between FastAPI and SQLAlchemy
-    (as a lot of values may get calculated).
+* Needs handling
 
+  * ``need_create``
+  * ``need_create_done``
+  * ``need_read``
+  * ``need_read_done``
+  * ``need_change``
+  * ``need_change_done``
+  * ``need_delete``
+  * ``need_delete_done``
+
+**Attention**: It is not allowed to make any object manipulations on events with postfix ``_done``.
+Events with ``_done`` are mostly for notification and to update additional objects, like some metrics.
+
+If events are missing, feel free to create a PR.
 
 .. include:: ../discussion.rst
