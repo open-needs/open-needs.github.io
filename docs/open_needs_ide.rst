@@ -7,7 +7,7 @@ Open-Needs IDE
       :align: center
       :width: 200px
 
-:status: :badge:`work in progress,badge-primary`
+:status: :badge:`released,badge-secondary`
 :repository: https://github.com/open-needs/open-needs-ide
 :user documentation: https://open-needs.org/open-needs-ide/
 

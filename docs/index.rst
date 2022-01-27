@@ -73,16 +73,17 @@ Concept summary
                         rest <=> func
                         func <=> db
                     }
+                    card "**Data**:\n<&chevron-left><&chevron-right>needs\n<&chevron-right>filters\n<&chevron-right>configs\n<&chevron-right>functions\n<&chevron-left>tables\n<&chevron-left>images" as data
                 }
                 card "Builder" as builder
             }
-
 
             artifact "**Final documentation**\n(HTML, PDF, ...)" as final #6af
 
             docs ==> parser
             parser ==> interface
-            interface <=> rest
+            interface <=> data
+            data <=> rest
 
             interface ==> builder
 
@@ -122,6 +123,7 @@ Concept summary
                 card "Parser" as parser
                 card "**Open-Needs**\n**Client**" as client #6fa
                 card "Builder" as builder
+                card "**Data**:\n<&chevron-left><&chevron-right>needs\n<&chevron-right>filters\n<&chevron-right>configs\n<&chevron-right>functions\n<&chevron-left>tables\n<&chevron-left>images" as data
             }
 
             card "**Open-Needs Server**" as on #6fa {
@@ -140,19 +142,24 @@ Concept summary
                 note right: Quick analysis\nand comparisons
             }
 
+            card "Service X" as service {
+                card "Issue Data" as issue #6fa
+                note right: Safely integrate\nexternal data
+            }
+
             ext .[#333]l.> docs: supports \nduring writing
             docs ==> parser
             parser ==> client
-            client => rest
+            client <=> data
+            data <=> rest
 
-            rest => client
             client ==> builder
-
-            builder <==> final
+            builder ==> final
 
             rest .[#333]u..> ext
 
             rest .[#333]d..> webapp
+            rest .[#333]d..> issue
 
 
         @enduml

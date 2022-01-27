@@ -53,6 +53,7 @@ Different Interfaces can be build to access the data in different tools.
 
         card Configuration as conf #fff {
             card "JSON based"
+            card "ENV / CLI support"
         }
 
         int -[hidden]-> conf
