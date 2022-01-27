@@ -67,13 +67,13 @@ Concept summary
 
                     card "Open-Needs Server" as on {
                         cloud "**API**\n(REST based)" as rest
-                        card "**Need functions**:\n*validate\n*calculate\n*filter\n*represent" as func
+                        card "**Need functions**:\n*validate\n*calculate\n*filter\n*represent" as func #ccc
                         database "**Database**\n(SQLite)" as db
 
                         rest <=> func
                         func <=> db
                     }
-                    card "**Data**:\n<&chevron-left><&chevron-right>needs\n<&chevron-right>filters\n<&chevron-right>configs\n<&chevron-right>functions\n<&chevron-left>tables\n<&chevron-left>images" as data
+                    card "**Data**:\n<&chevron-left><&chevron-right>needs\n<&chevron-right>filters\n<&chevron-right>configs\n<&chevron-right>functions\n<&chevron-left>tables\n<&chevron-left>images" as data #ccc
                 }
                 card "Builder" as builder
             }
@@ -123,12 +123,12 @@ Concept summary
                 card "Parser" as parser
                 card "**Open-Needs**\n**Client**" as client #6fa
                 card "Builder" as builder
-                card "**Data**:\n<&chevron-left><&chevron-right>needs\n<&chevron-right>filters\n<&chevron-right>configs\n<&chevron-right>functions\n<&chevron-left>tables\n<&chevron-left>images" as data
+                card "**Data**:\n<&chevron-left><&chevron-right>needs\n<&chevron-right>filters\n<&chevron-right>configs\n<&chevron-right>functions\n<&chevron-left>tables\n<&chevron-left>images" as data #ccc
             }
 
             card "**Open-Needs Server**" as on #6fa {
                 cloud "**API**\n(REST based)" as rest
-                card "**Need functions**:\n*validate\n*calculate\n*filter\n*represent" as func
+                card "**Need functions**:\n*validate\n*calculate\n*filter\n*represent" as func #ccc
                 database "**Database**\n(SQL based)" as db
 
                 rest <=> func

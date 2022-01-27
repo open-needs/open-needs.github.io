@@ -181,6 +181,8 @@ All dynamic elements (links, dynamic function) shall be resolved in the context 
 It does not contain any information about project/domain configuration.
 For this a :ref:`needs_container` must be used.
 
+So it acts mostly as a key-value store.
+
 Schema
 ~~~~~~
 :name: Need schema
