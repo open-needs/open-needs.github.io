@@ -10,7 +10,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -56,6 +56,10 @@ preview_config = {
     },
     "timeout": 500,
 }
+
+local_plantuml_path = os.path.join(os.path.dirname(__file__), "utils", "plantuml-1.2022.0.jar")
+plantuml = f"java -jar {local_plantuml_path}"
+plantuml_output_format = "svg_img"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
