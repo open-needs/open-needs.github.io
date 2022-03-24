@@ -35,7 +35,7 @@ Education and Research.
           :align: center
           :scale: 15
           :target: https://prototypefund.de/en/
-     - .. image:: _static/bmbf_logo_en.svg
+     - .. image:: _static/BMBF_RGB_Gef_L_e.jpg
           :align: center
           :width: 150px
           :target: https://www.bmbf.de/bmbf/en/
