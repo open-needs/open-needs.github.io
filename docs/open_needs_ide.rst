@@ -20,10 +20,6 @@ the `Language Server Protocol <https://microsoft.github.io/language-server-proto
     There is already existing code available on https://github.com/open-needs/open-needs-ide, which is based
     on a code donation from the Automotive section of the `Robert Bosch GmbH <https://www.bosch.com/>`__.
 
-    .. image:: _static/bosch_logo.png
-       :align: center
-       :width: 200px
-
     The current version of **Open Needs IDE** works with the
     `needs.json <https://sphinxcontrib-needs.readthedocs.io/en/latest/builders.html>`__ file of
     `Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io>`__ only.
