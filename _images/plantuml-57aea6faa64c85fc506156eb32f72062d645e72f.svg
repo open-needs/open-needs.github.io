@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="293px" preserveAspectRatio="none" style="width:937px;height:293px;background:#FFFFFF;" version="1.1" viewBox="0 0 937 293" width="937px" zoomAndPan="magnify"><defs><filter height="300%" id="f1saou7yh1ruvb" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[9d466c5a3c3149398d60225914e05625]
+cluster org--><rect fill="#66AAFF" filter="url(#f1saou7yh1ruvb)" height="73" style="stroke:#000000;stroke-width:1.5;" width="116" x="7" y="15"/><line style="stroke:#000000;stroke-width:1.5;" x1="7" x2="123" y1="35.2969" y2="35.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="100" x="15" y="29.9951">Organization</text><!--MD5=[7914b04aec008c64a90eebee73fb9d36]
+cluster project--><rect fill="#66AAFF" filter="url(#f1saou7yh1ruvb)" height="89" style="stroke:#000000;stroke-width:1.5;" width="442" x="217" y="7"/><line style="stroke:#000000;stroke-width:1.5;" x1="217" x2="659" y1="27.2969" y2="27.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="56" x="410" y="21.9951">Project</text><!--MD5=[293c6a1e097a37776013f6b27dd2a726]
+cluster cont--><rect fill="#66AAFF" filter="url(#f1saou7yh1ruvb)" height="266.5" style="stroke:#000000;stroke-width:1.5;" width="166" x="759" y="15"/><line style="stroke:#000000;stroke-width:1.5;" x1="759" x2="925" y1="35.2969" y2="35.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130" x="777" y="29.9951">Needs container</text><!--MD5=[bb55ad6380ff7cb117d5e38d7ff3184f]
+entity projects--><rect fill="#FEFECE" filter="url(#f1saou7yh1ruvb)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="81" x="24.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="34.5" y="65.9951">Project/s</text><!--MD5=[3cdbfd2781bff588497da22d9e5f8f25]
+entity domain_own--><rect fill="#FEFECE" filter="url(#f1saou7yh1ruvb)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="108" x="527" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="537" y="65.9951">Own Domain</text><!--MD5=[09005767ea31884161062d12503e7243]
+entity domains--><rect fill="#FEFECE" filter="url(#f1saou7yh1ruvb)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="86" x="391" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="401" y="65.9951">Domain/s</text><!--MD5=[b5c8865e29be71c17e5fae5f1449dd5b]
+entity pr_needs--><rect fill="#FEFECE" filter="url(#f1saou7yh1ruvb)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="65" x="275.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="285.5" y="65.9951">Needs</text><!--MD5=[68ee199d46f3ce3c48339370f100a1e5]
+entity domain2--><rect fill="#FEFECE" filter="url(#f1saou7yh1ruvb)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="73" x="805.5" y="162"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="815.5" y="177.9951">Domain</text><path d="M775,240.5 L775,265.6328 A0,0 0 0 0 775,265.6328 L909,265.6328 A0,0 0 0 0 909,265.6328 L909,250.5 L899,240.5 L846,240.5 L842,184.2 L838,240.5 L775,240.5 A0,0 0 0 0 775,240.5 " fill="#FBFB77" filter="url(#f1saou7yh1ruvb)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M899,240.5 L899,250.5 L909,250.5 L899,240.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="113" x="781" y="257.5669">Container specific</text><!--MD5=[61f6630f5daaf84977ae7f4b36f3168d]
+entity needs--><rect fill="#FEFECE" filter="url(#f1saou7yh1ruvb)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="70" x="807" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="817" y="65.9951">Need/s</text><!--MD5=[8890788e37b11dd3053f547e2b5ce265]
+entity domain--><rect fill="#66AAFF" filter="url(#f1saou7yh1ruvb)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="73" x="397.5" y="235"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="407.5" y="257.9951">Domain</text><!--MD5=[e4dd1e948aece8c387052f75f7b8b0ba]
+entity need--><rect fill="#66AAFF" filter="url(#f1saou7yh1ruvb)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="57" x="685.5" y="43"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="695.5" y="65.9951">Need</text><!--MD5=[49856a8fb4c7d67a7789ef1445bec06e]
+link needs to domain2--><path d="M842,72.15 C842,91.55 842,133.99 842,156.79 " fill="none" id="needs-to-domain2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="842,161.87,846,152.87,842,156.87,838,152.87,842,161.87" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="843" y="133.0669">based on</text><!--MD5=[505a0a58ea6e3d88ec3e4f08aef49ef2]
+link projects to project--><path d="M105.79,61 C128.38,61 156.5125,61 179.775,61 C191.4063,61 201.82,61 209.7147,61 C211.6884,61 213.5046,61 215.143,61 C215.5527,61 215.9512,61 216.3382,61 C216.5318,61 216.7224,61 216.9102,61 " fill="none" id="projects-to-project" style="stroke:#A80036;stroke-width:2.0;"/><polygon fill="#A80036" points="216.9102,61,207.9102,57,211.9102,61,207.9102,65,216.9102,61" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="131.07" y="54.0669">references</text><!--MD5=[c70cc65ff1fa9f268d0fd237d63b7d89]
+link domains to domain--><path d="M434,72.22 C434,101.93 434,188.82 434,229.94 " fill="none" id="domains-to-domain" style="stroke:#A80036;stroke-width:2.0;"/><polygon fill="#A80036" points="434,234.96,438,225.96,434,229.96,430,225.96,434,234.96" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="435" y="177.5669">references</text><!--MD5=[a6b2952b313da5a2a6a996976e38b2c0]
+@startuml
+skinparam nodesep 50
+skinparam ranksep 50
+
+    card "Organization" as org  #6af {
+        card "Project/s" as projects
+    }
+
+    card "Project" as project #6af{
+        card "Own Domain" as domain_own
+        card "Domain/s" as domains
+        card "Needs" as pr_needs
+    }
+
+    rectangle "Domain" as domain #6af
+
+    card "Needs container" as cont #6af {
+        card "Domain" as domain2
+        note bottom: Container specific
+        card "Need/s" as needs
+    }
+
+    rectangle "Need" as need #6af
+
+    needs -d-> domain2: based on
+
+    projects => project : references
+    domains ===> domain : references
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

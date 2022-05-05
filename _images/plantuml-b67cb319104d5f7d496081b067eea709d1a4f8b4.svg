@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="413px" preserveAspectRatio="none" style="width:772px;height:413px;background:#FFFFFF;" version="1.1" viewBox="0 0 772 413" width="772px" zoomAndPan="magnify"><defs><filter height="300%" id="f1n858rgy7dqj3" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[57cfc2015c9d3964671bcbff5cacbb7f]
+cluster s--><rect fill="#66AAFF" filter="url(#f1n858rgy7dqj3)" height="255.5" style="stroke:#000000;stroke-width:1.5;" width="542" x="7" y="146"/><line style="stroke:#000000;stroke-width:1.5;" x1="7" x2="549" y1="166.2969" y2="166.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="251.5" y="160.9951">Sphinx</text><!--MD5=[086a1d64d676afad4f14286c2b9385b1]
+cluster rst--><rect fill="#FFFFFF" filter="url(#f1n858rgy7dqj3)" height="90" style="stroke:#000000;stroke-width:1.5;" width="142" x="10" y="7"/><polygon fill="#FFFFFF" points="135,12,135,26,147,26,147,18,141,12,135,12" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="141" x2="141" y1="12" y2="18"/><line style="stroke:#000000;stroke-width:1.5;" x1="147" x2="141" y1="18" y2="18"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="68" x="47" y="21.9951">RST files</text><!--MD5=[4647957a334afa5b2232915896330279]
+entity sn--><rect fill="#FEFECE" filter="url(#f1n858rgy7dqj3)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="116" x="23" y="192.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="33" y="208.4951">Sphinx-Needs</text><!--MD5=[086b1281b1127995763cd5b7e3480964]
+entity dom--><path d="M245,191 C245,181 272,181 272,181 C272,181 299,181 299,191 L299,216.2969 C299,226.2969 272,226.2969 272,226.2969 C272,226.2969 245,226.2969 245,216.2969 L245,191 " fill="#FEFECE" filter="url(#f1n858rgy7dqj3)" style="stroke:#000000;stroke-width:1.5;"/><path d="M245,191 C245,201 272,201 272,201 C272,201 299,201 299,191 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="255" y="217.9951">DOM</text><!--MD5=[a17e17d51b6b9b9bb192798e6f7f1fd3]
+entity builder--><rect fill="#FEFECE" filter="url(#f1n858rgy7dqj3)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="109" x="423.5" y="192.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="433.5" y="208.4951">HTML builder</text><!--MD5=[2dadc7a36809567621feb613983f5d7b]
+entity req_obj--><rect fill="#FEFECE" filter="url(#f1n858rgy7dqj3)" height="55.5938" style="stroke:#000000;stroke-width:1.5;" width="120" x="23" y="326.5"/><polygon fill="#FEFECE" points="126,331.5,126,345.5,138,345.5,138,337.5,132,331.5,126,331.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="132" x2="132" y1="331.5" y2="337.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="138" x2="132" y1="337.5" y2="337.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="33" y="352.4951">Requirement</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="33" y="368.792">Object</text><!--MD5=[6fbb13b825c101f95d6f2173ef261baf]
+entity needs_dict--><path d="M267,333.5 C267,323.5 310,323.5 310,323.5 C310,323.5 353,323.5 353,333.5 L353,375.0938 C353,385.0938 310,385.0938 310,385.0938 C310,385.0938 267,385.0938 267,375.0938 L267,333.5 " fill="#FEFECE" filter="url(#f1n858rgy7dqj3)" style="stroke:#000000;stroke-width:1.5;"/><path d="M267,333.5 C267,343.5 310,343.5 310,343.5 C310,343.5 353,343.5 353,333.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="277" y="360.4951">Needs</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="277" y="376.792">dictionary</text><!--MD5=[cc8efa1ff0a1edd4fa6feb80dccab04c]
+entity req_def--><rect fill="#FEFECE" filter="url(#f1n858rgy7dqj3)" height="38.5938" style="stroke:#000000;stroke-width:1.5;" width="110" x="26" y="42"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="36" y="57.9951">Requirement</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="36" y="74.292">Definition</text><!--MD5=[0a2bd27fccdac7a369aac2b428719809]
+entity html--><rect fill="#FEFECE" filter="url(#f1n858rgy7dqj3)" height="55.5938" style="stroke:#000000;stroke-width:1.5;" width="135" x="623.5" y="175.5"/><polygon fill="#FEFECE" points="741.5,180.5,741.5,194.5,753.5,194.5,753.5,186.5,747.5,180.5,741.5,180.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="747.5" x2="747.5" y1="180.5" y2="186.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="753.5" x2="747.5" y1="186.5" y2="186.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="633.5" y="201.4951">HTML</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="633.5" y="217.792">documentation</text><!--MD5=[33a4b181c8dac0059601a86b1deb9077]
+link req_def to sn--><path d="M81,81.09 C81,109.01 81,161.23 81,187.13 " fill="none" id="req_def-to-sn" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="81,192.24,85,183.24,81,187.24,77,183.24,81,192.24" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="82" y="126.0669">1) read by</text><!--MD5=[2308fb0312a500c6cb0e86699e7a3eea]
+link sn to req_obj--><path d="M81.14,214.74 C81.43,236.34 82.11,287.32 82.57,321.11 " fill="none" id="sn-to-req_obj" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="82.64,326.37,86.511,317.3138,82.5686,321.3705,78.5118,317.4281,82.64,326.37" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="83" y="282.0669">2) creates</text><!--MD5=[ba75cb98e5d0006736b1c09f864bdded]
+link req_obj to needs_dict--><path d="M143.24,354.5 C180.29,354.5 227.15,354.5 261.75,354.5 " fill="none" id="req_obj-to-needs_dict" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="266.76,354.5,257.76,350.5,261.76,354.5,257.76,358.5,266.76,354.5" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87" x="161.5" y="347.5669">3) is stored in</text><!--MD5=[8572f98d35a6f719cf2c744d2972a5d0]
+link sn to needs_dict--><path d="M100.63,217.28 C136.23,240.44 212.35,289.96 262.33,322.49 " fill="none" id="sn-needs_dict" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="266.78,325.38,261.4249,317.1143,262.5914,322.6495,257.0561,323.8161,266.78,325.38" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="96.38,214.51,101.7351,222.7757,100.5686,217.2405,106.1039,216.0739,96.38,214.51" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="220.5" y="274.5669">4) interacts</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="217" y="289.6997">and updates</text><!--MD5=[493632750dc456083d3073ee4a4d0e74]
+link sn to dom--><path d="M139.08,203.5 C172.01,203.5 211.98,203.5 239.44,203.5 " fill="none" id="sn-to-dom" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="244.76,203.5,235.76,199.5,239.76,203.5,235.76,207.5,244.76,203.5" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="157.5" y="196.5669">5) updates</text><!--MD5=[fa4126bf9fc201ebd8855d6d7fd67631]
+link dom to builder--><path d="M299.36,203.5 C329.52,203.5 378.98,203.5 418.22,203.5 " fill="none" id="dom-to-builder" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="423.44,203.5,414.44,199.5,418.44,203.5,414.44,207.5,423.44,203.5" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="317.25" y="181.5669">6) interpreted</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="15" x="353.75" y="196.6997">by</text><!--MD5=[f0741a111445cce2e74645bd38ae2bec]
+link builder to html--><path d="M532.58,203.5 C558.57,203.5 590.02,203.5 618.03,203.5 " fill="none" id="builder-to-html" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="623.22,203.5,614.22,199.5,618.22,203.5,614.22,207.5,623.22,203.5" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="551" y="196.5669">7) builds</text><!--MD5=[ee39835d7737a0922d2dddac795589e5]
+@startuml
+
+card Sphinx as s #6af {
+    card "Sphinx-Needs" as sn
+    database "DOM" as dom
+    card "HTML builder" as builder
+
+    artifact "Requirement\nObject" as req_obj
+
+    database "Needs\ndictionary" as needs_dict
+}
+
+
+artifact "RST files" as rst {
+    card "Requirement\nDefinition" as req_def
+}
+
+artifact "HTML\ndocumentation" as html
+
+req_def - -> sn : 1) read by
+sn - -> req_obj : 2) creates
+req_obj -right-> needs_dict  : 3) is stored in
+sn <- -> needs_dict  : 4) interacts\nand updates
+sn -> dom: 5) updates
+dom -> builder: 6) interpreted\nby
+builder -> html: 7) builds
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

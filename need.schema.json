@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-needs.org/need.schema.json",
+  "title": "Open-Needs Need schema",
+  "type": "object",
+  "patternProperties": {
+    "^.*$": {
+      "type": [
+        "string",
+        "number",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "source_type",
+    "source_uri"
+  ]
+}

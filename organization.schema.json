@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-needs.org/organization.schema.json",
+  "title": "Open-Needs Organization schema",
+  "type": "object",
+  "properties": {
+    "key": {
+      "description": "An unique string as key, which represents the organization in urls.",
+      "type": "string"
+    },
+    "title": {
+      "description": "A title for the organization, which is used as textual representation in documents and websites.",
+      "type": "string"
+    },
+    "description": {
+      "description": "A description of the organization.",
+      "type": "string"
+    },
+    "url": {
+      "description": "An url to a webpage of the organization.",
+      "type": "string"
+    },
+    "projects": {
+      "description": "A list of projects belonging to the organization",
+      "type": "array",
+      "items": {
+         "$ref": "https://open-needs.org/project.schema.json"
+       }
+    }
+  },
+  "required": ["key", "title", "projects"]
+}

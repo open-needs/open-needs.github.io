@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="171px" preserveAspectRatio="none" style="width:678px;height:171px;background:#FFFFFF;" version="1.1" viewBox="0 0 678 171" width="678px" zoomAndPan="magnify"><defs><filter height="300%" id="f10vx4lbmkygzp" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[091077a2f88d0d20898678e26ee3479b]
+class Organizations--><rect codeLine="1" fill="#FEFECE" filter="url(#f10vx4lbmkygzp)" height="99.2188" id="Organizations" style="stroke:#A80036;stroke-width:1.5;" width="127" x="537.5" y="32"/><ellipse cx="557" cy="48" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M559.9688,53.6406 Q559.3906,53.9375 558.75,54.0781 Q558.1094,54.2344 557.4063,54.2344 Q554.9063,54.2344 553.5781,52.5938 Q552.2656,50.9375 552.2656,47.8125 Q552.2656,44.6875 553.5781,43.0313 Q554.9063,41.375 557.4063,41.375 Q558.1094,41.375 558.75,41.5313 Q559.4063,41.6875 559.9688,41.9844 L559.9688,44.7031 Q559.3438,44.125 558.75,43.8594 Q558.1563,43.5781 557.5313,43.5781 Q556.1875,43.5781 555.5,44.6563 Q554.8125,45.7188 554.8125,47.8125 Q554.8125,49.9063 555.5,50.9844 Q556.1875,52.0469 557.5313,52.0469 Q558.1563,52.0469 558.75,51.7813 Q559.3438,51.5 559.9688,50.9219 L559.9688,53.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="85" x="572" y="52.1543">Organizations</text><line style="stroke:#A80036;stroke-width:1.5;" x1="538.5" x2="663.5" y1="64" y2="64"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="545.5" y="72"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="557.5" y="78.2104">id: unique int</text><ellipse cx="548.5" cy="87.8047" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="101" x="557.5" y="91.0151">org_id: unique str</text><ellipse cx="548.5" cy="100.6094" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="557.5" y="103.8198">name: str</text><ellipse cx="548.5" cy="113.4141" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="557.5" y="116.6245">description: str</text><line style="stroke:#A80036;stroke-width:1.5;" x1="538.5" x2="663.5" y1="123.2188" y2="123.2188"/><!--MD5=[cd09e43f1cb39691797eb02fd65d7e24]
+class Projects--><rect codeLine="1" fill="#FEFECE" filter="url(#f10vx4lbmkygzp)" height="137.6328" id="Projects" style="stroke:#A80036;stroke-width:1.5;" width="240" x="246" y="13"/><ellipse cx="336.25" cy="29" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M339.2188,34.6406 Q338.6406,34.9375 338,35.0781 Q337.3594,35.2344 336.6563,35.2344 Q334.1563,35.2344 332.8281,33.5938 Q331.5156,31.9375 331.5156,28.8125 Q331.5156,25.6875 332.8281,24.0313 Q334.1563,22.375 336.6563,22.375 Q337.3594,22.375 338,22.5313 Q338.6563,22.6875 339.2188,22.9844 L339.2188,25.7031 Q338.5938,25.125 338,24.8594 Q337.4063,24.5781 336.7813,24.5781 Q335.4375,24.5781 334.75,25.6563 Q334.0625,26.7188 334.0625,28.8125 Q334.0625,30.9063 334.75,31.9844 Q335.4375,33.0469 336.7813,33.0469 Q337.4063,33.0469 338,32.7813 Q338.5938,32.5 339.2188,31.9219 L339.2188,34.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="51" x="356.75" y="33.1543">Projects</text><line style="stroke:#A80036;stroke-width:1.5;" x1="247" x2="485" y1="45" y2="45"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="254" y="53"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="266" y="59.2104">id: unique int</text><ellipse cx="257" cy="68.8047" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="81" x="266" y="72.0151">organization</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="39" x="347" y="72.0151">: ref to</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="90" x="390" y="72.0151">Organizations</text><ellipse cx="257" cy="81.6094" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="266" y="84.8198">project_id: unique str</text><ellipse cx="257" cy="94.4141" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="266" y="97.6245">name: str</text><ellipse cx="257" cy="107.2188" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="266" y="110.4292">description: str</text><ellipse cx="257" cy="120.0234" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="266" y="123.2339">configs: json dict</text><ellipse cx="257" cy="132.8281" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="266" y="136.0386">rules: json dict</text><line style="stroke:#A80036;stroke-width:1.5;" x1="247" x2="485" y1="142.6328" y2="142.6328"/><!--MD5=[12b53fb22388e9be630e6e081568c43d]
+class Needs--><rect codeLine="1" fill="#FEFECE" filter="url(#f10vx4lbmkygzp)" height="150.4375" id="Needs" style="stroke:#A80036;stroke-width:1.5;" width="188" x="7" y="7"/><ellipse cx="76.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M79.7188,28.6406 Q79.1406,28.9375 78.5,29.0781 Q77.8594,29.2344 77.1563,29.2344 Q74.6563,29.2344 73.3281,27.5938 Q72.0156,25.9375 72.0156,22.8125 Q72.0156,19.6875 73.3281,18.0313 Q74.6563,16.375 77.1563,16.375 Q77.8594,16.375 78.5,16.5313 Q79.1563,16.6875 79.7188,16.9844 L79.7188,19.7031 Q79.0938,19.125 78.5,18.8594 Q77.9063,18.5781 77.2813,18.5781 Q75.9375,18.5781 75.25,19.6563 Q74.5625,20.7188 74.5625,22.8125 Q74.5625,24.9063 75.25,25.9844 Q75.9375,27.0469 77.2813,27.0469 Q77.9063,27.0469 78.5,26.7813 Q79.0938,26.5 79.7188,25.9219 L79.7188,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="40" x="97.25" y="27.1543">Needs</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="194" y1="39" y2="39"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="47"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="27" y="53.2104">id: unique int</text><ellipse cx="18" cy="62.8047" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="45" x="27" y="66.0151">project</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="31" x="76" y="66.0151">ref to</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="52" x="111" y="66.0151">Projects</text><ellipse cx="18" cy="75.6094" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="47" x="27" y="78.8198">version</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="24" x="74" y="78.8198">: str</text><ellipse cx="18" cy="88.4141" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="68" x="27" y="91.6245">need_id: str</text><ellipse cx="18" cy="101.2188" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="27" y="104.4292">title: str</text><ellipse cx="18" cy="114.0234" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="27" y="117.2339">content: str</text><ellipse cx="18" cy="126.8281" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="162" x="27" y="130.0386">content_type: enum[rst, md]</text><ellipse cx="18" cy="139.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="27" y="142.8433">data: JSON</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="194" y1="149.4375" y2="149.4375"/><!--MD5=[49d0e9c4a450406f76e23254847621dc]
+link Needs to Projects--><path codeLine="6" d="M196,61 C216.05,61 222.06,55.99 239.69,55.13 " fill="none" id="Needs-to-Projects" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="245,55,235.9109,51.2067,240.0013,55.1143,236.0938,59.2046,245,55" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[aeeff1e9a69975aa525aeb82ac63dbeb]
+link Projects to Organizations--><path codeLine="7" d="M494.15,74.62 C506.8,74.28 519.49,74.06 531.77,74.01 " fill="none" id="Projects-to-Organizations" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="537,74,528,70,532,74,528,78,537,74" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[311da6dfd1487acf465be4d10e9d5497]
+@startuml
+!include db_organizations_model.puml
+!include db_projects_model.puml
+!include db_needs_model.puml
+
+
+Needs::project -> Projects::id
+Projects::organizations -> Organizations::id
+
+
+@enduml
+
+@startuml
+    class Organizations {
+        - id: unique int
+        + org_id: unique str
+        + name: str
+        + description: str
+    }
+    class Projects {
+        - id: unique int
+        + **organization**: ref to **Organizations**
+        + project_id: unique str
+        + name: str
+        + description: str
+        + configs: json dict
+        + rules: json dict
+    }
+    class Needs {
+        - id: unique int
+        + **project** ref to **Projects**
+        + **version**: str
+       + need_id: str
+        + title: str
+        + content: str
+        + content_type: enum[rst, md]
+        + data: JSON
+    }
+
+
+Needs::project -> Projects::id
+Projects::organizations -> Organizations::id
+
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

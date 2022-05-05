@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="427px" preserveAspectRatio="none" style="width:881px;height:427px;background:#FFFFFF;" version="1.1" viewBox="0 0 881 427" width="881px" zoomAndPan="magnify"><defs><filter height="300%" id="fbzrbp2mq7zkn" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[e8f3788ad7b97e8de68b4194558bc2a1]
+cluster db--><rect fill="#66FFAA" filter="url(#fbzrbp2mq7zkn)" height="115" style="stroke:#000000;stroke-width:1.5;" width="296" x="7" y="180"/><line style="stroke:#000000;stroke-width:1.5;" x1="7" x2="303" y1="200.2969" y2="200.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="156" x="77" y="194.9951">Open-Needs Server</text><!--MD5=[57cfc2015c9d3964671bcbff5cacbb7f]
+cluster s--><rect fill="#66AAFF" filter="url(#fbzrbp2mq7zkn)" height="115" style="stroke:#000000;stroke-width:1.5;" width="542" x="327" y="180"/><line style="stroke:#000000;stroke-width:1.5;" x1="327" x2="869" y1="200.2969" y2="200.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="571.5" y="194.9951">Sphinx</text><!--MD5=[086a1d64d676afad4f14286c2b9385b1]
+cluster rst--><rect fill="#FFFFFF" filter="url(#fbzrbp2mq7zkn)" height="109" style="stroke:#000000;stroke-width:1.5;" width="142" x="330" y="7"/><polygon fill="#FFFFFF" points="455,12,455,26,467,26,467,18,461,12,455,12" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="461" x2="461" y1="12" y2="18"/><line style="stroke:#000000;stroke-width:1.5;" x1="467" x2="461" y1="18" y2="18"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="68" x="367" y="21.9951">RST files</text><!--MD5=[ac40dd4c03671801018102ca7be9c337]
+entity rest--><rect fill="#FEFECE" filter="url(#fbzrbp2mq7zkn)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="82" x="23" y="245.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="33" y="261.4951">REST API</text><!--MD5=[95e797a9df3a2e6815f040e8c1644678]
+entity sql--><path d="M215,244 C215,234 251,234 251,234 C251,234 287,234 287,244 L287,269.2969 C287,279.2969 251,279.2969 251,279.2969 C251,279.2969 215,279.2969 215,269.2969 L215,244 " fill="#FEFECE" filter="url(#fbzrbp2mq7zkn)" style="stroke:#000000;stroke-width:1.5;"/><path d="M215,244 C215,254 251,254 251,254 C251,254 287,254 287,244 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="225" y="270.9951">SQL DB</text><!--MD5=[4647957a334afa5b2232915896330279]
+entity sn--><rect fill="#FEFECE" filter="url(#fbzrbp2mq7zkn)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="116" x="343" y="245.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="353" y="261.4951">Sphinx-Needs</text><!--MD5=[086b1281b1127995763cd5b7e3480964]
+entity dom--><path d="M565,244 C565,234 592,234 592,234 C592,234 619,234 619,244 L619,269.2969 C619,279.2969 592,279.2969 592,279.2969 C592,279.2969 565,279.2969 565,269.2969 L565,244 " fill="#FEFECE" filter="url(#fbzrbp2mq7zkn)" style="stroke:#000000;stroke-width:1.5;"/><path d="M565,244 C565,254 592,254 592,254 C592,254 619,254 619,244 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="575" y="270.9951">DOM</text><!--MD5=[a17e17d51b6b9b9bb192798e6f7f1fd3]
+entity builder--><rect fill="#FEFECE" filter="url(#fbzrbp2mq7zkn)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="109" x="743.5" y="245.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="753.5" y="261.4951">HTML builder</text><!--MD5=[cc8efa1ff0a1edd4fa6feb80dccab04c]
+entity req_def--><rect fill="#FEFECE" filter="url(#fbzrbp2mq7zkn)" height="38.5938" style="stroke:#000000;stroke-width:1.5;" width="110" x="346" y="61"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="356" y="76.9951">Requirement</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="356" y="93.292">Definition</text><!--MD5=[2dadc7a36809567621feb613983f5d7b]
+entity req_obj--><rect fill="#FEFECE" filter="url(#fbzrbp2mq7zkn)" height="55.5938" style="stroke:#000000;stroke-width:1.5;" width="120" x="146" y="358"/><polygon fill="#FEFECE" points="249,363,249,377,261,377,261,369,255,363,249,363" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="255" x2="255" y1="363" y2="369"/><line style="stroke:#000000;stroke-width:1.5;" x1="261" x2="255" y1="369" y2="369"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="156" y="383.9951">Requirement</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="156" y="400.292">Object</text><!--MD5=[0a2bd27fccdac7a369aac2b428719809]
+entity html--><rect fill="#FEFECE" filter="url(#fbzrbp2mq7zkn)" height="55.5938" style="stroke:#000000;stroke-width:1.5;" width="135" x="730.5" y="358"/><polygon fill="#FEFECE" points="848.5,363,848.5,377,860.5,377,860.5,369,854.5,363,848.5,363" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="854.5" x2="854.5" y1="363" y2="369"/><line style="stroke:#000000;stroke-width:1.5;" x1="860.5" x2="854.5" y1="369" y2="369"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="740.5" y="383.9951">HTML</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="740.5" y="400.292">documentation</text><!--MD5=[33a4b181c8dac0059601a86b1deb9077]
+link req_def to sn--><path d="M401,100.12 C401,134.76 401,208.48 401,240.33 " fill="none" id="req_def-to-sn" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="401,245.42,405,236.42,401,240.42,397,236.42,401,245.42" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="402" y="152.5669">1) read by</text><!--MD5=[2308fb0312a500c6cb0e86699e7a3eea]
+link sn to req_obj--><path d="M385.7,267.5 C357.23,286.12 295.09,326.75 251.91,354.98 " fill="none" id="sn-to-req_obj" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="247.53,357.84,257.2501,356.2528,251.7121,355.0995,252.8654,349.5615,247.53,357.84" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="316" y="324.0669">2) creates</text><!--MD5=[31ef7f1dfc4e489638119b1bfec01b58]
+link req_obj to rest--><path d="M175.76,357.84 C145.98,331.11 101.75,291.4 78.89,270.87 " fill="none" id="req_obj-to-rest" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="75.14,267.5,79.1709,276.4862,78.8628,270.8377,84.5113,270.5296,75.14,267.5" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="141" y="324.0669">3) is send to</text><!--MD5=[0401ec311e31cb7148629313df24b117]
+link rest to sql--><path d="M110.13,256.5 C140.65,256.5 180.33,256.5 209.79,256.5 " fill="none" id="rest-sql" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="214.8,256.5,205.8,252.5,209.8,256.5,205.8,260.5,214.8,256.5" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="105.04,256.5,114.04,260.5,110.04,256.5,114.04,252.5,105.04,256.5" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="123.5" y="249.5669">4) interacts</text><!--MD5=[07e4ffb8f0b54ea826566313aa0cfef6]
+link rest to sn--><path d="M73.04,245.18 C91.64,222.92 136.71,174.05 187.5,156 C236.33,138.64 258.44,145.54 303,172 C336.04,191.62 368.68,222.75 386.71,241.25 " fill="none" id="rest-to-sn" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="390.54,245.22,387.1722,235.9649,387.0693,241.6208,381.4134,241.5179,390.54,245.22" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71" x="188.5" y="145.0669">5) provides</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="196.5" y="160.1997">final data</text><!--MD5=[493632750dc456083d3073ee4a4d0e74]
+link sn to dom--><path d="M459.08,256.5 C492.01,256.5 531.98,256.5 559.44,256.5 " fill="none" id="sn-to-dom" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="564.76,256.5,555.76,252.5,559.76,256.5,555.76,260.5,564.76,256.5" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="477.5" y="249.5669">6) updates</text><!--MD5=[fa4126bf9fc201ebd8855d6d7fd67631]
+link dom to builder--><path d="M619.36,256.5 C649.52,256.5 698.98,256.5 738.22,256.5 " fill="none" id="dom-to-builder" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="743.44,256.5,734.44,252.5,738.44,256.5,734.44,260.5,743.44,256.5" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="637.25" y="234.5669">7) interpreted</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="15" x="673.75" y="249.6997">by</text><!--MD5=[f0741a111445cce2e74645bd38ae2bec]
+link builder to html--><path d="M798,267.5 C798,285.63 798,324.63 798,352.73 " fill="none" id="builder-to-html" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="798,357.84,802,348.84,798,352.84,794,348.84,798,357.84" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="799" y="324.0669">8) builds</text><!--MD5=[0c7ecff54ad11c7334cd8b9288e19975]
+@startuml
+card "Open-Needs Server" as db #6fa{
+
+    card "REST API" as rest
+    database "SQL DB" as sql
+}
+card Sphinx as s #6af {
+    card "Sphinx-Needs" as sn
+    database "DOM" as dom
+    card "HTML builder" as builder
+}
+
+artifact "Requirement\nObject" as req_obj
+
+artifact "RST files" as rst {
+    card "Requirement\nDefinition" as req_def
+}
+
+artifact "HTML\ndocumentation" as html
+
+req_def - -> sn : 1) read by
+sn - -> req_obj : 2) creates
+req_obj - -> rest  : 3) is send to
+rest <-> sql : 4) interacts
+rest -> sn:  5) provides\n final data
+sn -> dom: 6) updates
+dom -> builder: 7) interpreted\nby
+builder - -> html: 8) builds
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

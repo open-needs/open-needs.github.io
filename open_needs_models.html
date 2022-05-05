@@ -1,0 +1,1641 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Open-Needs IDE" href="open_needs_ide.html" /><link rel="prev" title="Extensions" href="open_needs_server/extensions.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+        <title>Open-Needs Models - Open-Needs</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/assets/jsonview.bundle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/libs/html/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/layouts.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/styles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/modern.css" />
+    <link rel="stylesheet" type="text/css" href="_static/assets/sphinx_preview.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     <em>Important:</em> This project is still in concept phase and most points are under discussion. 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Open-Needs</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/open-needs-logo.png" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="open_needs_server/index.html">Open-Needs Server</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="open_needs_server/extensions.html">Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Open-Needs Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_needs_ide.html">Open-Needs IDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_needs_webapp.html">Open-Needs WebApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
+</ul>
+
+</div><div class="sidebar-tree">
+    <ul>
+        <li>
+            <a class="reference external" href="https://github.com/open-needs" target="_blank">
+               Open-Needs on github
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="sidebar-tree open-needs-badges">
+    <ul>
+        <li>
+            <a class="reference" href="https://github.com/open-needs/open-needs.github.io/commits/main" target="_blank">
+                <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/open-needs/open-needs.github.io/main?style=flat-square">
+                </a>
+        </li>
+        <li>
+            <a class="reference" href="https://github.com/open-needs/open-needs.github.io/actions" target="_blank">
+                <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/open-needs/open-needs.github.io/sphinx_docs?style=flat-square">
+                </a>
+        </li>
+    </ul>
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="open-needs-models">
+<span id="models"></span><h1>Open-Needs Models<a class="headerlink" href="#open-needs-models" title="Permalink to this headline">#</a></h1>
+<p><strong>Open-Needs</strong> is written to support docs-as-code philosophy and existing tools.
+And as most information is stored in files on code versioning systems, also the main source of information for
+<strong>Open-Needs</strong> shall be files.</p>
+<p>Beside extracting need objects from documentation files (e.g. md or rst), it shall be also possible to import them
+from json-files, which may contain exported data from an issue tracking systems.</p>
+<p>Also the complete configuration of a project in <strong>Open-Needs</strong> shall be defined in json format and files.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="c1d7a200-8a20-4440-8016-d1c37fa975a5" name="4881365b-1bd1-4e74-a578-f83ee977655c" type="radio"/>
+<label class="tabbed-label" for="c1d7a200-8a20-4440-8016-d1c37fa975a5">
+Models</label><div class="tabbed-content docutils">
+<figure class="align-center">
+<p class="plantuml">
+<img alt='@startuml
+skinparam nodesep 50
+skinparam ranksep 50
+
+    card "Organization" as org  #6af {
+        card "Project/s" as projects
+    }
+
+    card "Project" as project #6af{
+        card "Project Domain" as domain_own
+        card "Domain/s" as domains
+        card "Needs" as pr_needs
+    }
+
+    rectangle "Domain" as domain #6af
+
+    card "Needs container" as cont #6af {
+        card "Container\nDomain" as domain2
+        card "Need/s" as needs
+    }
+
+    rectangle "Need" as need #6af
+
+    projects =&gt; project : references
+    domains ==&gt; domain : references
+
+    cont -[hidden]&gt; need
+
+@enduml
+' src="_images/plantuml-2fa19325e28aa2d16d401f245d379e2b8b820b75.svg"/></p>
+</figure>
+</div>
+<input id="5cdf542c-e2ae-426f-ab03-d56d09865a90" name="4881365b-1bd1-4e74-a578-f83ee977655c" type="radio"/>
+<label class="tabbed-label" for="5cdf542c-e2ae-426f-ab03-d56d09865a90">
+Models with Schemas</label><div class="tabbed-content docutils">
+<figure class="align-center">
+<p class="plantuml">
+<img alt="@startuml
+skinparam nodesep 50
+skinparam ranksep 50
+!include models_overview.puml
+
+    artifact &quot;organization.schema&quot; as s_org  #6fa
+    artifact &quot;project.schema&quot; as s_project  #6fa
+    artifact &quot;domain.schema&quot; as s_domain  #6fa
+    artifact &quot;needs_container.schema&quot; as s_need_cont  #6fa
+    artifact &quot;need.schema&quot; as s_need  #6fa
+
+    ''Schema links
+
+    s_org --&gt; org : describes
+    s_project --&gt; project : describes
+    s_domain --&gt; domain : describes
+    s_domain --&gt; domain2 : describes
+    s_domain --&gt; domain_own : describes
+    s_need_cont --&gt; cont : describes
+    s_need --&gt; needs : describes
+    s_need --&gt; need : describes
+    s_need --&gt; pr_needs : describes
+
+@enduml
+" src="_images/plantuml-82b122eb0c2ac63753a90dbd51fb326117660b65.svg"/></p>
+</figure>
+</div>
+</div>
+<section id="json-schema">
+<h2>json-schema<a class="headerlink" href="#json-schema" title="Permalink to this headline">#</a></h2>
+<p>All kind of data provided by or stored inside <strong>Open-Needs</strong> shall have a schema defined by
+<a class="reference external" href="https://json-schema.org/">json-schema</a>.</p>
+<p>This shall affect all <strong>Open-Needs</strong> related files, which are created/used by client tools.
+E.g. a project configuration, stored as <code class="docutils literal notranslate"><span class="pre">open_needs_project_conf.json</span></code>, which is used by a client tool like
+<a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/">Sphinx-Needs</a> to setup the project configuration on
+<strong>Open-Needs Server</strong>.</p>
+<p>json-schema will not be used to validate REST API requests or the content of the database.
+It is mostly used to validate files, which are used inside a docs-as-code approach to keep information in files and
+therefore also on git repositories.</p>
+</section>
+<section id="organization-configurations">
+<h2>Organization configurations<a class="headerlink" href="#organization-configurations" title="Permalink to this headline">#</a></h2>
+<p>An organization is an unique entity, which contains mostly projects only.</p>
+<p>It may be used in future for common configuration of projects, which belong to one organization.</p>
+<section id="schema">
+<h3>Schema<a class="headerlink" href="#schema" title="Permalink to this headline">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">name</dt>
+<dd class="field-odd"><p>Organization schema</p>
+</dd>
+<dt class="field-even">uri</dt>
+<dd class="field-even"><p><a class="reference external" href="https://open-needs.org/organization.schema.json">https://open-needs.org/organization.schema.json</a></p>
+</dd>
+<dt class="field-odd">location</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">/models/organization.schema.json</span></code></p>
+</dd>
+<dt class="field-even">status</dt>
+<dd class="field-even"><p><span class="sphinx-bs badge badge-primary">work in progress</span></p>
+</dd>
+</dl>
+<div class="tabbed-set docutils">
+<input checked="checked" id="f25394ae-c382-4a67-bfd2-03c3d2d6eff6" name="8bfddb1a-1a78-46c6-a989-645f322f27d9" type="radio"/>
+<label class="tabbed-label" for="f25394ae-c382-4a67-bfd2-03c3d2d6eff6">
+raw</label><div class="tabbed-content docutils">
+<div class="on-schema highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">"$schema"</span><span class="p">:</span> <span class="s2">"https://json-schema.org/draft/2020-12/schema"</span><span class="p">,</span>
+  <span class="s2">"$id"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/organization.schema.json"</span><span class="p">,</span>
+  <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Open-Needs Organization schema"</span><span class="p">,</span>
+  <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+  <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"key"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An unique string as key, which represents the organization in urls."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A title for the organization, which is used as textual representation in documents and websites."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"description"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A description of the organization."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"url"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An url to a webpage of the organization."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"projects"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A list of projects belonging to the organization"</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"array"</span><span class="p">,</span>
+      <span class="s2">"items"</span><span class="p">:</span> <span class="p">{</span>
+         <span class="s2">"$ref"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/project.schema.json"</span>
+       <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"key"</span><span class="p">,</span> <span class="s2">"title"</span><span class="p">,</span> <span class="s2">"projects"</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="932a943b-5e7a-4dd2-96f1-0af2ae13df4f" name="8bfddb1a-1a78-46c6-a989-645f322f27d9" type="radio"/>
+<label class="tabbed-label" for="932a943b-5e7a-4dd2-96f1-0af2ae13df4f">
+table</label><div class="tabbed-content docutils">
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="3"><p><a class="reference external" href="https://open-needs.org/organization.schema.json">https://open-needs.org/organization.schema.json</a></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><em>Open-Needs Organization schema</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="2"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>properties</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>key</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>An unique string as key, which represents the organization in urls.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>title</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>A title for the organization, which is used as textual representation in documents and websites.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>description</p></li>
+</ul>
+</td>
+<td colspan="2"><p>A description of the organization.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>url</p></li>
+</ul>
+</td>
+<td colspan="2"><p>An url to a webpage of the organization.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><ul class="simple">
+<li><p><strong>projects</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>A list of projects belonging to the organization</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>array</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>items</p></td>
+<td><p><span class="xref std std-ref">https://open-needs.org/project.schema.json</span></p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<input id="1a0e12f5-4f0c-4ed8-ae0e-cdebb40160fc" name="8bfddb1a-1a78-46c6-a989-645f322f27d9" type="radio"/>
+<label class="tabbed-label" for="1a0e12f5-4f0c-4ed8-ae0e-cdebb40160fc">
+list</label><div class="tabbed-content docutils">
+<div class="sphinx-data-viewer docutils container">
+<p></p><div class="sdv-data" data-expand="True" data-sdv='{"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://open-needs.org/organization.schema.json", "title": "Open-Needs Organization schema", "type": "object", "properties": {"key": {"description": "An unique string as key, which represents the organization in urls.", "type": "string"}, "title": {"description": "A title for the organization, which is used as textual representation in documents and websites.", "type": "string"}, "description": {"description": "A description of the organization.", "type": "string"}, "url": {"description": "An url to a webpage of the organization.", "type": "string"}, "projects": {"description": "A list of projects belonging to the organization", "type": "array", "items": {"$ref": "https://open-needs.org/project.schema.json"}}}, "required": ["key", "title", "projects"]}'> </div></div>
+</div>
+<input id="cca1eb9e-abe1-46d6-9122-e11e6f7f36f2" name="8bfddb1a-1a78-46c6-a989-645f322f27d9" type="radio"/>
+<label class="tabbed-label" for="cca1eb9e-abe1-46d6-9122-e11e6f7f36f2">
+image</label><div class="tabbed-content docutils">
+<p class="plantuml">
+<img alt="@startjson
+!include models/organization.schema.json
+@endjson" src="_images/plantuml-195a6e731a9490ae8a1c40b4250a4a26bd3e6ae5.svg"/></p>
+</div>
+</div>
+</section>
+</section>
+<section id="project-configurations">
+<h2>Project configurations<a class="headerlink" href="#project-configurations" title="Permalink to this headline">#</a></h2>
+<p>In <strong>Open-Needs</strong> a project configuration contains the configuration for the following elements:</p>
+<ul class="simple">
+<li><p>need types</p></li>
+<li><p>need options</p></li>
+<li><p>need link types</p></li>
+<li><p>project warnings</p></li>
+<li><p>global option values</p></li>
+<li><p>and much more</p></li>
+</ul>
+<p>Take a look into the
+<a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html">configuration documentation of Sphinx-Needs</a>
+to get a feeling about what may be part of a project configuration in future.</p>
+<p>Most configuration is clustered inside <strong>Open-Needs Domains</strong>, so that a project configuration contains
+its project specific config under the domain <code class="docutils literal notranslate"><span class="pre">project</span></code> and imports the other domains under their domain specific
+name.</p>
+<section id="id1">
+<h3>Schema<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">name</dt>
+<dd class="field-odd"><p>Project schema</p>
+</dd>
+<dt class="field-even">uri</dt>
+<dd class="field-even"><p><a class="reference external" href="https://open-needs.org/project.schema.json">https://open-needs.org/project.schema.json</a></p>
+</dd>
+<dt class="field-odd">location</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">/models/project.schema.json</span></code></p>
+</dd>
+<dt class="field-even">status</dt>
+<dd class="field-even"><p><span class="sphinx-bs badge badge-primary">work in progress</span></p>
+</dd>
+</dl>
+<div class="tabbed-set docutils">
+<input checked="checked" id="e12ef2b4-d0c6-417a-8780-14e43a49fecd" name="382158a5-4ad4-4155-bf37-1647829842b9" type="radio"/>
+<label class="tabbed-label" for="e12ef2b4-d0c6-417a-8780-14e43a49fecd">
+raw</label><div class="tabbed-content docutils">
+<div class="on-schema highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">"$schema"</span><span class="p">:</span> <span class="s2">"https://json-schema.org/draft/2020-12/schema"</span><span class="p">,</span>
+  <span class="s2">"$id"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/project.schema.json"</span><span class="p">,</span>
+  <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Open-Needs Project schema"</span><span class="p">,</span>
+  <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+  <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"key"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An unique string as key, which represents the project in urls."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A title for the project, which is used as textual representation in documents and websites."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span>  <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"description"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A textual description of the project."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span>  <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"url"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An url to a webpage of the project."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span>  <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"configuration"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A project specific configuration, based on domain.schema"</span><span class="p">,</span>
+      <span class="s2">"$ref"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/domain.schema.json"</span>
+    <span class="p">},</span>
+    <span class="s2">"domains"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A list of domains configuring the project"</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"array"</span><span class="p">,</span>
+      <span class="s2">"items"</span><span class="p">:</span> <span class="p">{</span>
+         <span class="s2">"$ref"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/domain.schema.json"</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"needs"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A list of needs belonging to the project"</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"array"</span><span class="p">,</span>
+      <span class="s2">"items"</span><span class="p">:</span> <span class="p">{</span>
+         <span class="s2">"$ref"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/need.schema.json"</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"key"</span><span class="p">,</span> <span class="s2">"title"</span><span class="p">,</span> <span class="s2">"configuration"</span><span class="p">,</span> <span class="s2">"domains"</span><span class="p">,</span> <span class="s2">"needs"</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="6c74d8fa-8437-451c-a22f-54daac7cfd8d" name="382158a5-4ad4-4155-bf37-1647829842b9" type="radio"/>
+<label class="tabbed-label" for="6c74d8fa-8437-451c-a22f-54daac7cfd8d">
+table</label><div class="tabbed-content docutils">
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="3"><p><a class="reference external" href="https://open-needs.org/project.schema.json">https://open-needs.org/project.schema.json</a></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><em>Open-Needs Project schema</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="2"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>properties</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>key</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>An unique string as key, which represents the project in urls.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>title</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>A title for the project, which is used as textual representation in documents and websites.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>description</p></li>
+</ul>
+</td>
+<td colspan="2"><p>A textual description of the project.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>url</p></li>
+</ul>
+</td>
+<td colspan="2"><p>An url to a webpage of the project.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>configuration</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>A project specific configuration, based on domain.schema</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p><span class="xref std std-ref">https://open-needs.org/domain.schema.json</span></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><ul class="simple">
+<li><p><strong>domains</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>A list of domains configuring the project</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>array</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>items</p></td>
+<td><p><span class="xref std std-ref">https://open-needs.org/domain.schema.json</span></p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><ul class="simple">
+<li><p><strong>needs</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>A list of needs belonging to the project</p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td><p><em>array</em></p></td>
+</tr>
+<tr class="row-even"><td><p>items</p></td>
+<td><p><span class="xref std std-ref">https://open-needs.org/need.schema.json</span></p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<input id="e864f122-113a-49f1-bc8d-a13d12dfa58f" name="382158a5-4ad4-4155-bf37-1647829842b9" type="radio"/>
+<label class="tabbed-label" for="e864f122-113a-49f1-bc8d-a13d12dfa58f">
+list</label><div class="tabbed-content docutils">
+<div class="sphinx-data-viewer docutils container">
+<p></p><div class="sdv-data" data-expand="True" data-sdv='{"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://open-needs.org/project.schema.json", "title": "Open-Needs Project schema", "type": "object", "properties": {"key": {"description": "An unique string as key, which represents the project in urls.", "type": "string"}, "title": {"description": "A title for the project, which is used as textual representation in documents and websites.", "type": "string"}, "description": {"description": "A textual description of the project.", "type": "string"}, "url": {"description": "An url to a webpage of the project.", "type": "string"}, "configuration": {"description": "A project specific configuration, based on domain.schema", "$ref": "https://open-needs.org/domain.schema.json"}, "domains": {"description": "A list of domains configuring the project", "type": "array", "items": {"$ref": "https://open-needs.org/domain.schema.json"}}, "needs": {"description": "A list of needs belonging to the project", "type": "array", "items": {"$ref": "https://open-needs.org/need.schema.json"}}}, "required": ["key", "title", "configuration", "domains", "needs"]}'> </div></div>
+</div>
+<input id="95c86a5a-3d3a-4e82-94c3-0737de958728" name="382158a5-4ad4-4155-bf37-1647829842b9" type="radio"/>
+<label class="tabbed-label" for="95c86a5a-3d3a-4e82-94c3-0737de958728">
+image</label><div class="tabbed-content docutils">
+<p class="plantuml">
+<img alt="@startjson
+!include models/project.schema.json
+@endjson" src="_images/plantuml-79442eb4d684a2bba06a605f126e4c7455cc4543.svg"/></p>
+</div>
+</div>
+</section>
+</section>
+<section id="domain-configurations">
+<h2>Domain configurations<a class="headerlink" href="#domain-configurations" title="Permalink to this headline">#</a></h2>
+<p><strong>Open-Needs Domains</strong> are a collection of need types, fields, checks and automatism, which are used to configure a
+project for one or multiple specific domains.</p>
+<p>With using domains a project gains the possibility to create and mange need objects for these domains.</p>
+<p>Domains are used to provide a common setup for a specific domain, so that no projects needs define all the needed
+need types and rules completely from scratch.</p>
+<p>Examples for domains are:</p>
+<ul class="simple">
+<li><p>Software development (E.g. requirements and specification types)</p></li>
+<li><p>Software architecture (E.g. class and component types)</p></li>
+<li><p>Autosar (E.g. SWC and runnable types)</p></li>
+<li><p>Employees (E.g. employee, group and role types)</p></li>
+<li><p>Software processes (E.g. process, step, workflow and artifact types)</p></li>
+</ul>
+<section id="id2">
+<h3>Schema<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">name</dt>
+<dd class="field-odd"><p>Domain schema</p>
+</dd>
+<dt class="field-even">uri</dt>
+<dd class="field-even"><p><a class="reference external" href="https://open-needs.org/domain.schema.json">https://open-needs.org/domain.schema.json</a></p>
+</dd>
+<dt class="field-odd">location</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">/models/domain.schema.json</span></code></p>
+</dd>
+<dt class="field-even">status</dt>
+<dd class="field-even"><p><span class="sphinx-bs badge badge-primary">work in progress</span></p>
+</dd>
+</dl>
+<div class="tabbed-set docutils">
+<input checked="checked" id="184ca353-1907-4959-b9e3-bafffbd39d0f" name="c65e5caf-4f25-4261-81b1-0eb784f5906d" type="radio"/>
+<label class="tabbed-label" for="184ca353-1907-4959-b9e3-bafffbd39d0f">
+raw</label><div class="tabbed-content docutils">
+<div class="on-schema highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">"$schema"</span><span class="p">:</span> <span class="s2">"https://json-schema.org/draft/2020-12/schema"</span><span class="p">,</span>
+  <span class="s2">"$id"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/domain.schema.json"</span><span class="p">,</span>
+  <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Open-Needs Domain schema"</span><span class="p">,</span>
+  <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+  <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"key"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An unique string as key, which represents the domain worldwide."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A title for the domain, which is used as textual representation in documents and websites."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"description"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A description of the domain."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"url"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An url to a webpage of the domain."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"types"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"List of need types which are defined by this domain"</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"array"</span><span class="p">,</span>
+      <span class="s2">"items"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+        <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"key"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Short key as string of the domain type."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+          <span class="p">},</span>
+          <span class="s2">"title"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Title as string of the domain type."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+          <span class="p">},</span>
+          <span class="s2">"color"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Color in hex of the domain type (for graphical representations)"</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span><span class="p">,</span>
+            <span class="s2">"pattern"</span><span class="p">:</span> <span class="s2">"^#(?:[0-9a-fA-F]</span><span class="si">{3}</span><span class="s2">){1,2}$"</span>
+          <span class="p">},</span>
+          <span class="s2">"style"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A PlantUML style name of the domain type (e.g. node or card)."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"key"</span><span class="p">,</span> <span class="s2">"title"</span><span class="p">,</span> <span class="s2">"color"</span><span class="p">,</span> <span class="s2">"style"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"options"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"List of need options which are defined by this domain."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"array"</span><span class="p">,</span>
+      <span class="s2">"items"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+        <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"name"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Name of the option as string."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+          <span class="p">},</span>
+          <span class="s2">"description"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description for the option."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+          <span class="p">},</span>
+          <span class="s2">"type"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Name of the options"</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span><span class="p">,</span>
+            <span class="s2">"enum"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"string"</span><span class="p">,</span> <span class="s2">"number"</span><span class="p">]</span>
+          <span class="p">},</span>
+          <span class="s2">"default"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Default value of the option, if not set."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"string"</span><span class="p">,</span> <span class="s2">"number"</span><span class="p">,</span> <span class="s2">"null"</span><span class="p">]</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"name"</span><span class="p">,</span> <span class="s2">"type"</span><span class="p">,</span> <span class="s2">"default"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"links"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"List of need links which are defined by this domain."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"array"</span><span class="p">,</span>
+      <span class="s2">"items"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+        <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"name"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Name of the link as string."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+          <span class="p">},</span>
+          <span class="s2">"description"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description for the link."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+          <span class="p">},</span>
+          <span class="s2">"incoming"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Label to use for incoming links."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+          <span class="p">},</span>
+          <span class="s2">"outgoing"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Label to use for outgoing links."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+          <span class="p">},</span>
+          <span class="s2">"allow_dead_links"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Links are allowed to reference not existing needs."</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"boolean"</span>
+          <span class="p">},</span>
+          <span class="s2">"style"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+            <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span>
+              <span class="s2">"color"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Color of the link in graphical representations."</span><span class="p">,</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span><span class="p">,</span>
+                <span class="s2">"pattern"</span><span class="p">:</span> <span class="s2">"^#(?:[0-9a-fA-F]</span><span class="si">{3}</span><span class="s2">){1,2}$"</span>
+              <span class="p">},</span>
+              <span class="s2">"color_part"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Color of the link in graphical representations (to need_parts)."</span><span class="p">,</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span><span class="p">,</span>
+                <span class="s2">"pattern"</span><span class="p">:</span> <span class="s2">"^#(?:[0-9a-fA-F]</span><span class="si">{3}</span><span class="s2">){1,2}$"</span>
+              <span class="p">},</span>
+              <span class="s2">"start"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"PlantUML link start character (e.g. . or - )."</span><span class="p">,</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+              <span class="p">},</span>
+              <span class="s2">"end"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"PlantUML link end character (e.g. &gt; or --o )."</span><span class="p">,</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">"required"</span><span class="p">:</span> <span class="p">[]</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"name"</span><span class="p">,</span> <span class="s2">"incoming"</span><span class="p">,</span> <span class="s2">"outgoing"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"key"</span><span class="p">,</span> <span class="s2">"title"</span><span class="p">,</span> <span class="s2">"description"</span><span class="p">,</span> <span class="s2">"types"</span><span class="p">,</span> <span class="s2">"options"</span><span class="p">,</span> <span class="s2">"links"</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="8e52a63c-6096-48f1-8a89-2042df8a190f" name="c65e5caf-4f25-4261-81b1-0eb784f5906d" type="radio"/>
+<label class="tabbed-label" for="8e52a63c-6096-48f1-8a89-2042df8a190f">
+table</label><div class="tabbed-content docutils">
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 17%"/>
+<col style="width: 17%"/>
+<col style="width: 17%"/>
+<col style="width: 17%"/>
+<col style="width: 17%"/>
+<col style="width: 17%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="6"><p><a class="reference external" href="https://open-needs.org/domain.schema.json">https://open-needs.org/domain.schema.json</a></p></td>
+</tr>
+<tr class="row-even"><td colspan="6"><p><em>Open-Needs Domain schema</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="5"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td colspan="6"><p>properties</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>key</strong></p></li>
+</ul>
+</td>
+<td colspan="5"><p>An unique string as key, which represents the domain worldwide.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="4"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>title</strong></p></li>
+</ul>
+</td>
+<td colspan="5"><p>A title for the domain, which is used as textual representation in documents and websites.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="4"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>description</strong></p></li>
+</ul>
+</td>
+<td colspan="5"><p>A description of the domain.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="4"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>url</p></li>
+</ul>
+</td>
+<td colspan="5"><p>An url to a webpage of the domain.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="4"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="13"><ul class="simple">
+<li><p><strong>types</strong></p></li>
+</ul>
+</td>
+<td colspan="5"><p>List of need types which are defined by this domain</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="4"><p><em>array</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="11"><p>items</p></td>
+<td><p>type</p></td>
+<td colspan="3"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td colspan="4"><p>properties</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>key</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>Short key as string of the domain type.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>title</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>Title as string of the domain type.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><ul class="simple">
+<li><p><strong>color</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>Color in hex of the domain type (for graphical representations)</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>pattern</p></td>
+<td colspan="2"><p>^#(?:[0-9a-fA-F]{3}){1,2}$</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><ul class="simple">
+<li><p><strong>style</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>A PlantUML style name of the domain type (e.g. node or card).</p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-even"><td rowspan="13"><ul class="simple">
+<li><p><strong>options</strong></p></li>
+</ul>
+</td>
+<td colspan="5"><p>List of need options which are defined by this domain.</p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="4"><p><em>array</em></p></td>
+</tr>
+<tr class="row-even"><td rowspan="11"><p>items</p></td>
+<td><p>type</p></td>
+<td colspan="3"><p><em>object</em></p></td>
+</tr>
+<tr class="row-odd"><td colspan="4"><p>properties</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><ul class="simple">
+<li><p><strong>name</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>Name of the option as string.</p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><ul class="simple">
+<li><p>description</p></li>
+</ul>
+</td>
+<td colspan="3"><p>Description for the option.</p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><ul class="simple">
+<li><p><strong>type</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>Name of the options</p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-even"><td><p>enum</p></td>
+<td colspan="2"><p>string, number</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>default</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>Default value of the option, if not set.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em> / <em>number</em> / <em>null</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="26"><ul class="simple">
+<li><p><strong>links</strong></p></li>
+</ul>
+</td>
+<td colspan="5"><p>List of need links which are defined by this domain.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="4"><p><em>array</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="24"><p>items</p></td>
+<td><p>type</p></td>
+<td colspan="3"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td colspan="4"><p>properties</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>name</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>Name of the link as string.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>description</p></li>
+</ul>
+</td>
+<td colspan="3"><p>Description for the link.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>incoming</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>Label to use for incoming links.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>outgoing</strong></p></li>
+</ul>
+</td>
+<td colspan="3"><p>Label to use for outgoing links.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="2"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>allow_dead_links</p></li>
+</ul>
+</td>
+<td colspan="3"><p>Links are allowed to reference not existing needs.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td colspan="2"><p><em>boolean</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="12"><ul class="simple">
+<li><p>style</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="2"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>properties</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><ul class="simple">
+<li><p>color</p></li>
+</ul>
+</td>
+<td colspan="2"><p>Color of the link in graphical representations.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>pattern</p></td>
+<td><p>^#(?:[0-9a-fA-F]{3}){1,2}$</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><ul class="simple">
+<li><p>color_part</p></li>
+</ul>
+</td>
+<td colspan="2"><p>Color of the link in graphical representations (to need_parts).</p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-even"><td><p>pattern</p></td>
+<td><p>^#(?:[0-9a-fA-F]{3}){1,2}$</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>start</p></li>
+</ul>
+</td>
+<td colspan="2"><p>PlantUML link start character (e.g. . or - ).</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>end</p></li>
+</ul>
+</td>
+<td colspan="2"><p>PlantUML link end character (e.g. &gt; or –o ).</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<input id="e5727e9b-c8f6-4f91-886d-c795856705d6" name="c65e5caf-4f25-4261-81b1-0eb784f5906d" type="radio"/>
+<label class="tabbed-label" for="e5727e9b-c8f6-4f91-886d-c795856705d6">
+list</label><div class="tabbed-content docutils">
+<div class="sphinx-data-viewer docutils container">
+<p></p><div class="sdv-data" data-expand="True" data-sdv='{"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://open-needs.org/domain.schema.json", "title": "Open-Needs Domain schema", "type": "object", "properties": {"key": {"description": "An unique string as key, which represents the domain worldwide.", "type": "string"}, "title": {"description": "A title for the domain, which is used as textual representation in documents and websites.", "type": "string"}, "description": {"description": "A description of the domain.", "type": "string"}, "url": {"description": "An url to a webpage of the domain.", "type": "string"}, "types": {"description": "List of need types which are defined by this domain", "type": "array", "items": {"type": "object", "properties": {"key": {"description": "Short key as string of the domain type.", "type": "string"}, "title": {"description": "Title as string of the domain type.", "type": "string"}, "color": {"description": "Color in hex of the domain type (for graphical representations)", "type": "string", "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$"}, "style": {"description": "A PlantUML style name of the domain type (e.g. node or card).", "type": "string"}}, "required": ["key", "title", "color", "style"]}}, "options": {"description": "List of need options which are defined by this domain.", "type": "array", "items": {"type": "object", "properties": {"name": {"description": "Name of the option as string.", "type": "string"}, "description": {"description": "Description for the option.", "type": "string"}, "type": {"description": "Name of the options", "type": "string", "enum": ["string", "number"]}, "default": {"description": "Default value of the option, if not set.", "type": ["string", "number", "null"]}}, "required": ["name", "type", "default"]}}, "links": {"description": "List of need links which are defined by this domain.", "type": "array", "items": {"type": "object", "properties": {"name": {"description": "Name of the link as string.", "type": "string"}, "description": {"description": "Description for the link.", "type": "string"}, "incoming": {"description": "Label to use for incoming links.", "type": "string"}, "outgoing": {"description": "Label to use for outgoing links.", "type": "string"}, "allow_dead_links": {"description": "Links are allowed to reference not existing needs.", "type": "boolean"}, "style": {"type": "object", "properties": {"color": {"description": "Color of the link in graphical representations.", "type": "string", "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$"}, "color_part": {"description": "Color of the link in graphical representations (to need_parts).", "type": "string", "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$"}, "start": {"description": "PlantUML link start character (e.g. . or - ).", "type": "string"}, "end": {"description": "PlantUML link end character (e.g. &gt; or --o ).", "type": "string"}}, "required": []}}, "required": ["name", "incoming", "outgoing"]}}}, "required": ["key", "title", "description", "types", "options", "links"]}'> </div></div>
+</div>
+<input id="e6b9b599-cb34-45c3-b10f-4ced5d7dbd5c" name="c65e5caf-4f25-4261-81b1-0eb784f5906d" type="radio"/>
+<label class="tabbed-label" for="e6b9b599-cb34-45c3-b10f-4ced5d7dbd5c">
+image</label><div class="tabbed-content docutils">
+<p class="plantuml">
+<img alt="@startjson
+!include models/domain.schema.json
+@endjson" src="_images/plantuml-2daa544b229e40a60e51683fa117850d4cd6ab59.svg"/></p>
+</div>
+</div>
+</section>
+</section>
+<section id="need-item">
+<h2>Need item<a class="headerlink" href="#need-item" title="Permalink to this headline">#</a></h2>
+<p>A single need item contains mostly its own data.</p>
+<p>All dynamic elements (links, dynamic function) shall be resolved in the context of a specific documentation build/version.</p>
+<p>It does not contain any information about project/domain configuration.
+For this a <a class="reference internal" href="#needs-container"><span class="std std-ref">Needs container</span></a> must be used.</p>
+<p>So it acts mostly as a key-value store.</p>
+<section id="id3">
+<h3>Schema<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">name</dt>
+<dd class="field-odd"><p>Need schema</p>
+</dd>
+<dt class="field-even">uri</dt>
+<dd class="field-even"><p><a class="reference external" href="https://open-needs.org/need.schema.json">https://open-needs.org/need.schema.json</a></p>
+</dd>
+<dt class="field-odd">location</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">/models/need.schema.json</span></code></p>
+</dd>
+<dt class="field-even">status</dt>
+<dd class="field-even"><p><span class="sphinx-bs badge badge-primary">work in progress</span></p>
+</dd>
+</dl>
+<div class="tabbed-set docutils">
+<input checked="checked" id="d3045640-cad5-4099-aa12-9b152c2d9676" name="5ae0b609-c925-47d6-8f53-4410a1ddf05e" type="radio"/>
+<label class="tabbed-label" for="d3045640-cad5-4099-aa12-9b152c2d9676">
+raw</label><div class="tabbed-content docutils">
+<div class="on-schema highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">"$schema"</span><span class="p">:</span> <span class="s2">"https://json-schema.org/draft/2020-12/schema"</span><span class="p">,</span>
+  <span class="s2">"$id"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/need.schema.json"</span><span class="p">,</span>
+  <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Open-Needs Need schema"</span><span class="p">,</span>
+  <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+  <span class="s2">"patternProperties"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"^.*$"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"string"</span><span class="p">,</span>
+        <span class="s2">"number"</span><span class="p">,</span>
+        <span class="s2">"null"</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"id"</span><span class="p">,</span>
+    <span class="s2">"source_type"</span><span class="p">,</span>
+    <span class="s2">"source_uri"</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="0cc4aa7b-3f6d-42a0-8845-4572f66b846d" name="5ae0b609-c925-47d6-8f53-4410a1ddf05e" type="radio"/>
+<label class="tabbed-label" for="0cc4aa7b-3f6d-42a0-8845-4572f66b846d">
+table</label><div class="tabbed-content docutils">
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="3"><p><a class="reference external" href="https://open-needs.org/need.schema.json">https://open-needs.org/need.schema.json</a></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><em>Open-Needs Need schema</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="2"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>patternProperties</p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li><p>^.*$</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td><p><em>string</em> / <em>number</em> / <em>null</em></p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<input id="3eb5a3c9-fd81-421d-9da9-ae88103d7bf7" name="5ae0b609-c925-47d6-8f53-4410a1ddf05e" type="radio"/>
+<label class="tabbed-label" for="3eb5a3c9-fd81-421d-9da9-ae88103d7bf7">
+list</label><div class="tabbed-content docutils">
+<div class="sphinx-data-viewer docutils container">
+<p></p><div class="sdv-data" data-expand="True" data-sdv='{"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://open-needs.org/need.schema.json", "title": "Open-Needs Need schema", "type": "object", "patternProperties": {"^.*$": {"type": ["string", "number", "null"]}}, "required": ["id", "source_type", "source_uri"]}'> </div></div>
+</div>
+<input id="2dfc40cc-384a-40d7-9d8e-a6b03b11b14e" name="5ae0b609-c925-47d6-8f53-4410a1ddf05e" type="radio"/>
+<label class="tabbed-label" for="2dfc40cc-384a-40d7-9d8e-a6b03b11b14e">
+image</label><div class="tabbed-content docutils">
+<p class="plantuml">
+<img alt="@startjson
+!include models/need.schema.json
+@endjson" src="_images/plantuml-3ebf70af790dc640e62f2b9fa93f379bf43f490c.svg"/></p>
+</div>
+</div>
+</section>
+</section>
+<section id="needs-container">
+<span id="id4"></span><h2>Needs container<a class="headerlink" href="#needs-container" title="Permalink to this headline">#</a></h2>
+<p>Needs can be created/imported via the documentation files or by a <code class="docutils literal notranslate"><span class="pre">needs_container.json</span></code> file.</p>
+<p>A <strong>needs container</strong> can be used to store data from external systems (like Jira or Codebeamer) and make it available
+in the docs-as-code environment.</p>
+<p>Also the <strong>Open-Needs</strong> tools are using this format to export their data, so that it can be used by scripts and other
+tools.</p>
+<p>A <strong>needs container</strong> only contains needs related information, this may be:</p>
+<ul class="simple">
+<li><p>Needs: All exported needs in a list with their data</p></li>
+<li><p>Needs Domain: needs related project configuration as <strong>Open-Needs Domain</strong> config (needed types, options)</p></li>
+</ul>
+<p>The exported <strong>Domain</strong> does contain information about the need configuration only.
+E.g. what types and options must be configured. It shall not contain none-need specific information like
+warnings, global values or automatism.</p>
+<p>A <strong>needs container</strong> contains the “executed” information of needs in a specific documentation context/run.
+All possible dynamic functions and references must be resolved.</p>
+<section id="id5">
+<h3>Schema<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">name</dt>
+<dd class="field-odd"><p>Needs container schema</p>
+</dd>
+<dt class="field-even">uri</dt>
+<dd class="field-even"><p><a class="reference external" href="https://open-needs.org/needs_container.schema.json">https://open-needs.org/needs_container.schema.json</a></p>
+</dd>
+<dt class="field-odd">location</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">/models/needs_container.schema.json</span></code></p>
+</dd>
+<dt class="field-even">status</dt>
+<dd class="field-even"><p><span class="sphinx-bs badge badge-primary">work in progress</span></p>
+</dd>
+</dl>
+<div class="tabbed-set docutils">
+<input checked="checked" id="0062d2d2-285e-4581-a0c9-c9a7e124f3cb" name="76450753-2d98-40fb-910a-f8960d4ae922" type="radio"/>
+<label class="tabbed-label" for="0062d2d2-285e-4581-a0c9-c9a7e124f3cb">
+raw</label><div class="tabbed-content docutils">
+<div class="on-schema highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">"$schema"</span><span class="p">:</span> <span class="s2">"https://json-schema.org/draft/2020-12/schema"</span><span class="p">,</span>
+  <span class="s2">"$id"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/needs_container.schema.json"</span><span class="p">,</span>
+  <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Open-Needs Needs container schema"</span><span class="p">,</span>
+  <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+  <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"key"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An unique string as key, which represents the project in urls."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A title for the project, which is used as textual representation in documents and websites."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span>  <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"description"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A textual description of the project."</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span>  <span class="s2">"string"</span>
+    <span class="p">},</span>
+    <span class="s2">"needs"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A list of needs belonging to the project"</span><span class="p">,</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"array"</span><span class="p">,</span>
+      <span class="s2">"items"</span><span class="p">:</span> <span class="p">{</span>
+         <span class="s2">"$ref"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/need.schema.json"</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"configuration"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A needs container specific configuration, based on domain.schema"</span><span class="p">,</span>
+      <span class="s2">"$ref"</span><span class="p">:</span> <span class="s2">"https://open-needs.org/domain.schema.json"</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"key"</span><span class="p">,</span> <span class="s2">"title"</span><span class="p">,</span> <span class="s2">"configuration"</span><span class="p">,</span> <span class="s2">"needs"</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="9b97d77b-2f40-4041-ae55-8d0f448c9c0e" name="76450753-2d98-40fb-910a-f8960d4ae922" type="radio"/>
+<label class="tabbed-label" for="9b97d77b-2f40-4041-ae55-8d0f448c9c0e">
+table</label><div class="tabbed-content docutils">
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="3"><p><a class="reference external" href="https://open-needs.org/needs_container.schema.json">https://open-needs.org/needs_container.schema.json</a></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><em>Open-Needs Needs container schema</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="2"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>properties</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>key</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>An unique string as key, which represents the project in urls.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p><strong>title</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>A title for the project, which is used as textual representation in documents and websites.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><ul class="simple">
+<li><p>description</p></li>
+</ul>
+</td>
+<td colspan="2"><p>A textual description of the project.</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><ul class="simple">
+<li><p><strong>needs</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>A list of needs belonging to the project</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p><em>array</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>items</p></td>
+<td><p><span class="xref std std-ref">https://open-needs.org/need.schema.json</span></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><ul class="simple">
+<li><p><strong>configuration</strong></p></li>
+</ul>
+</td>
+<td colspan="2"><p>A needs container specific configuration, based on domain.schema</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><span class="xref std std-ref">https://open-needs.org/domain.schema.json</span></p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<input id="4e544eb1-b86b-4e89-ab3c-a123486f1908" name="76450753-2d98-40fb-910a-f8960d4ae922" type="radio"/>
+<label class="tabbed-label" for="4e544eb1-b86b-4e89-ab3c-a123486f1908">
+list</label><div class="tabbed-content docutils">
+<div class="sphinx-data-viewer docutils container">
+<p></p><div class="sdv-data" data-expand="True" data-sdv='{"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://open-needs.org/needs_container.schema.json", "title": "Open-Needs Needs container schema", "type": "object", "properties": {"key": {"description": "An unique string as key, which represents the project in urls.", "type": "string"}, "title": {"description": "A title for the project, which is used as textual representation in documents and websites.", "type": "string"}, "description": {"description": "A textual description of the project.", "type": "string"}, "needs": {"description": "A list of needs belonging to the project", "type": "array", "items": {"$ref": "https://open-needs.org/need.schema.json"}}, "configuration": {"description": "A needs container specific configuration, based on domain.schema", "$ref": "https://open-needs.org/domain.schema.json"}}, "required": ["key", "title", "configuration", "needs"]}'> </div></div>
+</div>
+<input id="8d4eb72e-9990-4dd9-a59a-3f0013f0341c" name="76450753-2d98-40fb-910a-f8960d4ae922" type="radio"/>
+<label class="tabbed-label" for="8d4eb72e-9990-4dd9-a59a-3f0013f0341c">
+image</label><div class="tabbed-content docutils">
+<p class="plantuml">
+<img alt="@startjson
+!include models/needs_container.schema.json
+@endjson" src="_images/plantuml-a57b3994c377048ea2bf60f4eac219531cf5defa.svg"/></p>
+</div>
+</div>
+</section>
+</section>
+<section id="sphinx-needs-schema">
+<h2>Sphinx-Needs schema<a class="headerlink" href="#sphinx-needs-schema" title="Permalink to this headline">#</a></h2>
+<p>Here is the current json schema of Sphinx-Needs, which is not so complex but maybe can provide some ideas.</p>
+<p>Source: <a class="reference external" href="https://raw.githubusercontent.com/useblocks/sphinxcontrib-needs/master/sphinxcontrib/needs/needsfile.json">needsfile.json</a></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 14%"/>
+<col style="width: 14%"/>
+<col style="width: 14%"/>
+<col style="width: 14%"/>
+<col style="width: 14%"/>
+<col style="width: 14%"/>
+<col style="width: 14%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="7"><p><a class="reference external" href="http://json-schema.org/draft-07">http://json-schema.org/draft-07</a>/schema#</p></td>
+</tr>
+<tr class="row-even"><td colspan="7"><p><em>needs.json schema</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td colspan="6"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td colspan="7"><p>properties</p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li><p>created</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="5"><p><em>string</em></p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li><p><strong>current_version</strong></p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="5"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li><p><strong>project</strong></p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="5"><p><em>string</em></p></td>
+</tr>
+<tr class="row-even"><td rowspan="15"><ul class="simple">
+<li><p>versions</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="5"><p><em>object</em></p></td>
+</tr>
+<tr class="row-odd"><td colspan="6"><p>patternProperties</p></td>
+</tr>
+<tr class="row-even"><td rowspan="12"><ul class="simple">
+<li><p>^.*$</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="4"><p><em>object</em></p></td>
+</tr>
+<tr class="row-odd"><td colspan="5"><p>properties</p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li><p>created</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="3"><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li><p>filters</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="3"><p><em>object</em></p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li><p>filters_amount</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="3"><p><em>number</em></p></td>
+</tr>
+<tr class="row-odd"><td rowspan="6"><ul class="simple">
+<li><p>needs</p></li>
+</ul>
+</td>
+<td colspan="4"><p>patternProperties</p></td>
+</tr>
+<tr class="row-even"><td rowspan="5"><ul class="simple">
+<li><p>^.*$</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="2"><p><em>object</em></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>properties</p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li><p>title</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li><p>id</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li><p>description</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li><p>needs_amount</p></li>
+</ul>
+</td>
+<td><p>type</p></td>
+<td colspan="3"><p><em>number</em></p></td>
+</tr>
+<tr class="row-even"><td><p>additionalProperties</p></td>
+<td colspan="5"><p>False</p></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="discussion">
+<h2>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">#</a></h2>
+<p>For ideas and discussions going into details, please
+<a class="reference external" href="https://github.com/open-needs/open-needs.github.io/issues/new">create a specific ticket on our github project</a>.</p>
+<p>For any other short information, feel free to add a comment.</p>
+<div data-disqus-identifier="Open-Needs Models" data-disqus-shortname="open-needs-org" id="disqus_thread"></div></section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+
+        <div class="related-pages">
+          <a class="next-page" href="open_needs_ide.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Open-Needs IDE</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="open_needs_server/extensions.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Extensions</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2021, Open-Needs community
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D8T08RNFHC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D8T08RNFHC');
+</script>
+
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Open-Needs Models</a><ul>
+<li><a class="reference internal" href="#json-schema">json-schema</a></li>
+<li><a class="reference internal" href="#organization-configurations">Organization configurations</a><ul>
+<li><a class="reference internal" href="#schema">Schema</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#project-configurations">Project configurations</a><ul>
+<li><a class="reference internal" href="#id1">Schema</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#domain-configurations">Domain configurations</a><ul>
+<li><a class="reference internal" href="#id2">Schema</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#need-item">Need item</a><ul>
+<li><a class="reference internal" href="#id3">Schema</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#needs-container">Needs container</a><ul>
+<li><a class="reference internal" href="#id5">Schema</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sphinx-needs-schema">Sphinx-Needs schema</a></li>
+<li><a class="reference internal" href="#discussion">Discussion</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    <script src="_static/assets/jsonview.bundle.js"></script>
+    <script src="_static/assets/jsonview_loader.js"></script>
+    <script src="_static/sphinx-needs/libs/html/datatables.min.js"></script>
+    <script src="_static/sphinx-needs/libs/html/datatables_loader.js"></script>
+    <script src="_static/sphinx-needs/libs/html/sphinx_needs_collapse.js"></script>
+    <script src="_static/assets/sphinx_preview.js"></script>
+    <script src="_static/disqus.js"></script>
+    </body>
+</html>

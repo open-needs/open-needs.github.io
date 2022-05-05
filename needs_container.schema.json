@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-needs.org/needs_container.schema.json",
+  "title": "Open-Needs Needs container schema",
+  "type": "object",
+  "properties": {
+    "key": {
+      "description": "An unique string as key, which represents the project in urls.",
+      "type": "string"
+    },
+    "title": {
+      "description": "A title for the project, which is used as textual representation in documents and websites.",
+      "type":  "string"
+    },
+    "description": {
+      "description": "A textual description of the project.",
+      "type":  "string"
+    },
+    "needs": {
+      "description": "A list of needs belonging to the project",
+      "type": "array",
+      "items": {
+         "$ref": "https://open-needs.org/need.schema.json"
+      }
+    },
+    "configuration": {
+      "description": "A needs container specific configuration, based on domain.schema",
+      "$ref": "https://open-needs.org/domain.schema.json"
+    }
+  },
+  "required": ["key", "title", "configuration", "needs"]
+}

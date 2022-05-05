@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-needs.org/domain.schema.json",
+  "title": "Open-Needs Domain schema",
+  "type": "object",
+  "properties": {
+    "key": {
+      "description": "An unique string as key, which represents the domain worldwide.",
+      "type": "string"
+    },
+    "title": {
+      "description": "A title for the domain, which is used as textual representation in documents and websites.",
+      "type": "string"
+    },
+    "description": {
+      "description": "A description of the domain.",
+      "type": "string"
+    },
+    "url": {
+      "description": "An url to a webpage of the domain.",
+      "type": "string"
+    },
+    "types": {
+      "description": "List of need types which are defined by this domain",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "description": "Short key as string of the domain type.",
+            "type": "string"
+          },
+          "title": {
+            "description": "Title as string of the domain type.",
+            "type": "string"
+          },
+          "color": {
+            "description": "Color in hex of the domain type (for graphical representations)",
+            "type": "string",
+            "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$"
+          },
+          "style": {
+            "description": "A PlantUML style name of the domain type (e.g. node or card).",
+            "type": "string"
+          }
+        },
+        "required": ["key", "title", "color", "style"]
+      }
+    },
+    "options": {
+      "description": "List of need options which are defined by this domain.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Name of the option as string.",
+            "type": "string"
+          },
+          "description": {
+            "description": "Description for the option.",
+            "type": "string"
+          },
+          "type": {
+            "description": "Name of the options",
+            "type": "string",
+            "enum": ["string", "number"]
+          },
+          "default": {
+            "description": "Default value of the option, if not set.",
+            "type": ["string", "number", "null"]
+          }
+        },
+        "required": ["name", "type", "default"]
+      }
+    },
+    "links": {
+      "description": "List of need links which are defined by this domain.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Name of the link as string.",
+            "type": "string"
+          },
+          "description": {
+            "description": "Description for the link.",
+            "type": "string"
+          },
+          "incoming": {
+            "description": "Label to use for incoming links.",
+            "type": "string"
+          },
+          "outgoing": {
+            "description": "Label to use for outgoing links.",
+            "type": "string"
+          },
+          "allow_dead_links": {
+            "description": "Links are allowed to reference not existing needs.",
+            "type": "boolean"
+          },
+          "style": {
+            "type": "object",
+            "properties": {
+              "color": {
+                "description": "Color of the link in graphical representations.",
+                "type": "string",
+                "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$"
+              },
+              "color_part": {
+                "description": "Color of the link in graphical representations (to need_parts).",
+                "type": "string",
+                "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$"
+              },
+              "start": {
+                "description": "PlantUML link start character (e.g. . or - ).",
+                "type": "string"
+              },
+              "end": {
+                "description": "PlantUML link end character (e.g. > or --o ).",
+                "type": "string"
+              }
+            },
+            "required": []
+          }
+        },
+        "required": ["name", "incoming", "outgoing"]
+      }
+    }
+  },
+  "required": ["key", "title", "description", "types", "options", "links"]
+}

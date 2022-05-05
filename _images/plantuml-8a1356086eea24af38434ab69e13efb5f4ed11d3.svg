@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="304px" preserveAspectRatio="none" style="width:1117px;height:304px;background:#FFFFFF;" version="1.1" viewBox="0 0 1117 304" width="1117px" zoomAndPan="magnify"><defs><filter height="300%" id="f1mu9isxyjdv60" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[51a32c4ec503d26995ff86900fd263c9]
+cluster ide--><rect fill="#AAAAAA" filter="url(#f1mu9isxyjdv60)" height="285" style="stroke:#000000;stroke-width:1.5;" width="561" x="7" y="7"/><line style="stroke:#000000;stroke-width:1.5;" x1="7" x2="568" y1="27.2969" y2="27.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="24" x="275.5" y="21.9951">IDE</text><!--MD5=[d565000a02c36ab8783818f23086a68c]
+cluster ext--><rect fill="#66FFAA" filter="url(#f1mu9isxyjdv60)" height="171" style="stroke:#000000;stroke-width:1.5;" width="513" x="31" y="97"/><line style="stroke:#000000;stroke-width:1.5;" x1="31" x2="544" y1="133.5938" y2="133.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="98" x="238.5" y="111.9951">Open-Needs</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="107" x="234" y="128.292">IDE extension</text><!--MD5=[33e21862db3ac07cd9cbbdda4bf27b68]
+cluster Open Needs\nLanguage server--><rect fill="#66FFAA" filter="url(#f1mu9isxyjdv60)" height="171" style="stroke:#000000;stroke-width:1.5;" width="513" x="592" y="97"/><line style="stroke:#000000;stroke-width:1.5;" x1="592" x2="1105" y1="133.5938" y2="133.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97" x="800" y="111.9951">Open Needs</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="134" x="781.5" y="128.292">Language server</text><!--MD5=[352ef287b9f0ec53b7305306ae20b7fa]
+entity doc--><rect fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" height="39.2969" style="stroke:#000000;stroke-width:1.5;" width="140" x="194" y="42"/><polygon fill="#FEFECE" points="317,47,317,61,329,61,329,53,323,47,317,47" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="323" x2="323" y1="47" y2="53"/><line style="stroke:#000000;stroke-width:1.5;" x1="329" x2="323" y1="53" y2="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="204" y="67.9951">code document</text><!--MD5=[17c770a22f032767f685d8d16b0c9bdd]
+entity change--><polygon fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" points="551,61.5,505.5,48.5,414.5,48.5,369,61.5,414.5,74.5,505.5,74.5,551,61.5" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="414.5" y="66.4951">code change</text><!--MD5=[953543167c6874d2f2ca47c5aea302dc]
+entity comp--><rect fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="136" x="392" y="148"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="402" y="163.9951">code completion</text><!--MD5=[b884c49e90aee72efa00ae28a82100b7]
+entity goto reference--><rect fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="123" x="47.5" y="148"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103" x="57.5" y="163.9951">goto reference</text><!--MD5=[ed9e0380f25083b0526e861caeacff8a]
+entity need id generation--><rect fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="151" x="205.5" y="148"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="215.5" y="163.9951">need id generation</text><!--MD5=[b2a3ef29cccefd2aa6dca799cd383f2e]
+entity need preview--><rect fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="113" x="52.5" y="230"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="62.5" y="245.9951">need preview</text><!--MD5=[14b1832197ba8a06f8848dc8821f8b67]
+entity ls_comp--><rect fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="136" x="953" y="148"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="963" y="163.9951">code completion</text><!--MD5=[2abd06a9928bdf04ab33231900171bb9]
+entity ls_ref--><rect fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="123" x="608.5" y="148"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103" x="618.5" y="163.9951">goto reference</text><!--MD5=[f83d3dbd260b024db0fe300e2b59afc4]
+entity ls_id--><rect fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="151" x="766.5" y="148"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="776.5" y="163.9951">need id generation</text><!--MD5=[4dabd26a36ad04644b4dd5d49f5cf4be]
+entity ls_preview--><rect fill="#FEFECE" filter="url(#f1mu9isxyjdv60)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="113" x="613.5" y="230"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="623.5" y="245.9951">need preview</text><!--MD5=[3c874846147107eecae774487c176234]
+link doc to change--><path d="M334.05,61.5 C343.97,61.5 353.88,61.5 363.8,61.5 " fill="none" id="doc-to-change" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="368.98,61.5,359.98,57.5,363.98,61.5,359.98,65.5,368.98,61.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[aa33268d4c07ac22673faa2cea7de96d]
+link change to comp--><path d="M460,74.6 C460,91.79 460,123.31 460,142.29 " fill="none" id="change-to-comp" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="460,147.75,464,138.75,460,142.75,456,138.75,460,147.75" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[932dab5af8509ac3fe7f125f9307b50b]
+link ls_comp to comp--><path d="M1006.95,144.04 C991.03,127.99 963.55,102.93 935,89 C927.83,85.5 925.43,85.89 917.5,85 C883.49,81.16 643.51,81.16 609.5,85 C557.87,90.83 505.18,124.83 478.28,144.65 " fill="none" id="ls_comp-comp" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="474.18,147.71,483.78,145.51,478.18,144.71,478.98,139.11,474.18,147.71" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1010.74,147.91,1007.3164,138.6754,1007.2477,144.3318,1001.5912,144.2631,1010.74,147.91" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[28b7525394f357dd77309a20dc4c72af]
+link goto reference to need id generation--><!--MD5=[73ddfe4ab26d48fd3afe53f909ee4c95]
+link goto reference to need preview--><!--MD5=[3b2d178f482e0ff7771695eaa685b7de]
+link ls_ref to ls_id--><!--MD5=[0d4befdf027217396f3a80925495ec47]
+link ls_ref to ls_preview--><!--MD5=[e990c64de6b3e520a81ccee3a8545927]
+@startuml
+card "IDE" as ide #aaa{
+    card "Open-Needs\nIDE extension" as ext #6fa {
+        card "code completion" as comp
+        card "goto reference"
+        card "need id generation"
+        card "need preview"
+
+    }
+
+
+    artifact "code document" as doc
+    hexagon "code change" as change
+
+   doc -> change
+   change - -> comp
+}
+
+card "Open Needs\nLanguage server" #6fa {
+    card "code completion" as ls_comp
+    card "goto reference" as ls_ref
+    card "need id generation" as ls_id
+    card "need preview" as ls_preview
+}
+
+comp <-left-> ls_comp
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
