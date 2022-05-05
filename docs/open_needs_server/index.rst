@@ -9,7 +9,7 @@ Open-Needs Server
 
 :status: :badge:`work in progress,badge-primary`
 :repository: https://github.com/open-needs/open-needs-server
-:user documentation: tbd
+:user documentation: https://open-needs.org/open-needs-server/
 
 **Open-Needs Server** is a REST based Database to create, manage, link and automate life cycle objects.
 

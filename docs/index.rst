@@ -18,7 +18,7 @@ docs-as-code related tools.
 .. sidebar:: Tools & Extensions
 
    * `Open-Needs IDE <https://open-needs.org/open-needs-ide/>`_
-   * `Open-Needs Server <https://github.com/open-needs/open-needs-server>`_
+   * `Open-Needs Server <https://open-needs.org/open-needs-server/>`_
 
 This documentation describes the concept and current ideas of Open-Needs, which realization starts
 in 2022.
